@@ -1,0 +1,54 @@
+{
+  "name": "Opus",
+  "version": "1.0.0",
+  "description": "Master Public Navigation Portal & Tiered Living Knowledge Router for Rob Brown's Inventions, Life Work, and Economic Models",
+  "type": "luno-web-app",
+  "mainClass": "Opus",
+  "entrypoint": {
+    "file": "Opus.js",
+    "class": "Opus",
+    "method": "run"
+  },
+  "main": [
+    "js/OpusRouterComponent.js",
+    "js/OpusOverviewContent.js",
+    "js/OpusQ1CadContent.js",
+    "js/OpusQ2NarrativeContent.js",
+    "js/OpusQ3EconomicsContent.js",
+    "js/OpusQ4CockpitContent.js",
+    "Opus.js"
+  ],
+  "library": [
+    "DomBasics.js",
+    "UITools.js",
+    "DocumentReader.js",
+    "DictationWidget.js",
+    "SidePanel.js"
+  ],
+  "styles": [
+    "opus.css"
+  ],
+  "visibilitySets": {
+    "portal-lean": [
+      "Opus.js",
+      "js/OpusRouterComponent.js",
+      "content/overview.html",
+      "luno.json"
+    ],
+    "full-portal": [
+      "Opus.js",
+      "js/OpusRouterComponent.js",
+      "js/OpusOverviewContent.js",
+      "js/OpusQ1CadContent.js",
+      "js/OpusQ2NarrativeContent.js",
+      "js/OpusQ3EconomicsContent.js",
+      "js/OpusQ4CockpitContent.js",
+      "content/overview.html",
+      "content/q1_cad.html",
+      "content/q2_narrative.html",
+      "content/q3_economics.html",
+      "content/q4_cockpit.html",
+      "luno.json"
+    ]
+  }
+}

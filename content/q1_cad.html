@@ -1,0 +1,132 @@
+<article data-page="q1_cad" data-dossier="Opus">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Quadrant I • Spatial Inventions</span>
+    <h1 class="dossier-title">1. Inventions &amp; Spatial CAD (CadPlan, accuCad, accudraw)</h1>
+    <p class="dossier-subtitle">30-year proven AccuDraw floating 3D kinetic compass, SmartLine chaining, on-curve splines, and expired US Patent #5,754,182.</p>
+  </header>
+
+  <section data-section="q1_overview">
+    <h2 class="section-title">The AccuDraw Spatial Drafting Moat</h2>
+
+    <p data-block="p_q1_summary_1">
+      In the mid-1990s, while at Bentley Systems, I created <strong>AccuDraw</strong>, <strong>SmartLine</strong>, and <strong>PowerSelector</strong>. Prior to AccuDraw, drafting on computers was an exercise in frustration: users typed coordinate strings (<code>DX=10.5</code>, <code>@5&lt;45</code>) or drew disposable scratch lines.
+      <br><br>
+      AccuDraw replaced this with a <strong>floating kinetic coordinate compass</strong> directly under the cursor that evaluated mouse motion, locked axes with single keystrokes without the Enter key, and allowed instant 3D plane rotations (<code>T</code> for Top, <code>F</code> for Front, <code>S</code> for Side, <code>V</code> for View). This invention became Bentley's first issued patent (US Patent #5,754,182) and anchored over $5.0B in enterprise value.
+      <br><br>
+      Today, with patents expired, we are democratizing this technology through open web standards, pairing it with CADCraft (clean-room pure-Rust AutoCAD architecture) and wireless mobile touch controllers.
+    </p>
+
+    <aside data-block="sidebar_q1_tech" data-type="sidebar">
+      <span class="sidebar-kicker">Technical Invariants</span>
+      <strong class="sidebar-title">AccuDraw &amp; SmartLine Mathematical Core</strong>
+      <ul>
+        <li><strong>3x3 Direction Cosines:</strong> <code>ThreeAxes</code> (X, Y, Z unit basis) with non-flipping Gram-Schmidt alignment.</li>
+        <li><strong>50ms Chorded Tentative Snap:</strong> Model-space perpendicular projection dropping 90° normals to locked trajectories.</li>
+        <li><strong>SmartLine Two-Phase Arcs:</strong> Phase 1 (Center with dashed circle), Phase 2 (Sweep committing DXF bulge tan(θ/4)).</li>
+        <li><strong>On-Curve Spline Relaxation (<code>UpdateControlPoints.js</code>):</strong> 8-iteration G1 tangent solver without off-curve handles.</li>
+        <li><strong>Kinetic String-Drag (Tether):</strong> Low-pass mechanical filtering using Ctrl (stretch) and Shift (undo backtrack).</li>
+        <li><strong>Primary Repositories:</strong> <code>CadPlan</code>, <code>accuCad</code>, <code>accudraw</code>.</li>
+      </ul>
+    </aside>
+  </section>
+</article>
+</template>
+
+<template data-file="Opus/content/q2_narrative.html">
+<article data-page="q2_narrative" data-dossier="Opus">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Quadrant II • Valuation &amp; Reality</span>
+    <h1 class="dossier-title">2. Personal Narrative &amp; Forensic Valuation (situation, ValuationOfAccudraw)</h1>
+    <p class="dossier-subtitle">The documented contrast between creating $5.0B–$6.5B in corporate value versus living on food stamps, caretaker bias, and daughter custody separation.</p>
+  </header>
+
+  <section data-section="q2_overview">
+    <h2 class="section-title">Forensic Accounting &amp; The Personal Struggle</h2>
+
+    <p data-block="p_q2_summary_1">
+      The contrast in my life is stark and documented. On one hand, my software inventions anchored the core anti-churn moat for Bentley Systems, locking in 48 out of 50 U.S. State Departments of Transportation and contributing an estimated <strong>$5.0 Billion to $6.5 Billion</strong> of the company's enterprise market capitalization.
+      <br><br>
+      On the other hand, I currently survive on family assistance, food stamps, and a fraction of Social Security. The <code>situation</code> repository documents the legal, medical, and personal reality: years of uncompensated elder caregiving, caretaker bias in family disputes, severe financial hardship, and the painful estrangement from my daughter.
+      <br><br>
+      This quadrant is not an appeal for pity—it is an undeniable, forensic presentation of truth. The goal is achieving the visibility and financial restitution required to solve this life situation and reconnect with my daughter.
+    </p>
+
+    <aside data-block="sidebar_q2_facts" data-type="sidebar">
+      <span class="sidebar-kicker">Forensic Summary</span>
+      <strong class="sidebar-title">Valuation Metrics &amp; Legal Reality</strong>
+      <ul>
+        <li><strong>Enterprise Attribution:</strong> $5.0B to $6.5B of Bentley's ~$11B–$12B market cap attributed to AccuDraw neuromuscular lock-in.</li>
+        <li><strong>MicroStation 95 Window:</strong> Saved Bentley from hostile acquisition or displacement during the AutoCAD R13 crisis.</li>
+        <li><strong>The Human Reality:</strong> Food stamps, elder caregiving sacrifices, legal estrangement from daughter.</li>
+        <li><strong>Primary Repositories:</strong> <code>situation</code>, <code>ValuationOfAccudraw</code>.</li>
+      </ul>
+    </aside>
+  </section>
+</article>
+</template>
+
+<template data-file="Opus/content/q3_economics.html">
+<article data-page="q3_economics" data-dossier="Opus">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Quadrant III • Post-Labor Economics</span>
+    <h1 class="dossier-title">3. Post-Labor Macro-Economics &amp; Robot Dividend (EconomicsOfAutomation, JobsAndAI)</h1>
+    <p class="dossier-subtitle">A first-principles economic framework for surviving automation through the Robot Dividend, capital saturation, and labor phase-out.</p>
+  </header>
+
+  <section data-section="q3_overview">
+    <h2 class="section-title">The Robot Dividend &amp; Post-Labor Abundance</h2>
+
+    <p data-block="p_q3_summary_1">
+      As artificial intelligence and robotics accelerate, society faces an arithmetic breaking point: traditional economics relies on selling human labor hours to generate consumer purchasing power. When automated machines do the cognitive and physical labor, human wages collapse while machine output multiplies.
+      <br><br>
+      In <code>EconomicsOfAutomation</code> and <code>JobsAndAI</code>, I developed a first-principles economic model to break this 'doomer loop.' Using the thought experiment of the <strong>Colony of 100,000</strong>, I demonstrate that having automated machines do all work should result in leisure and abundance—not poverty—provided the productivity of the machines is distributed directly to citizens as a universal <strong>Robot Dividend</strong>.
+      <br><br>
+      This framework replaces fatalistic despair with rigorous game theory, proving that capital owners and consumers both require purchasing power velocity to sustain an automated economy.
+    </p>
+
+    <aside data-block="sidebar_q3_model" data-type="sidebar">
+      <span class="sidebar-kicker">Economic Framework</span>
+      <strong class="sidebar-title">The Colony of 100,000 &amp; The Dividend</strong>
+      <ul>
+        <li><strong>The Decoupling Principle:</strong> Human labor hours decouple from societal production output.</li>
+        <li><strong>The Colony of 100,000:</strong> An unencumbered thought experiment proving abundance with tangible currency.</li>
+        <li><strong>The Doomer Loop:</strong> Game-theoretic proof that wage collapse destroys aggregate demand for automated capital owners.</li>
+        <li><strong>Primary Repositories:</strong> <code>EconomicsOfAutomation</code>, <code>JobsAndAI</code>.</li>
+      </ul>
+    </aside>
+  </section>
+</article>
+</template>
+
+<template data-file="Opus/content/q4_cockpit.html">
+<article data-page="q4_cockpit" data-dossier="Opus">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Quadrant IV • Fleet Cockpit</span>
+    <h1 class="dossier-title">4. Fleet Infrastructure &amp; Cockpit (HomeSetup, Luno, Library)</h1>
+    <p class="dossier-subtitle">Multi-node LAN federation on Port 8080 connecting Mac and Linux, zero-token clipboard container execution, and living specification engines.</p>
+  </header>
+
+  <section data-section="q4_overview">
+    <h2 class="section-title">Luno Workspace &amp; Port 8080 Federation</h2>
+
+    <p data-block="p_q4_summary_1">
+      To power this rapid development without expensive commercial toolchains or cloud dependencies, I built <strong>Luno Workspace</strong>—a phone-first development cockpit running locally on Node.js.
+      <br><br>
+      Luno uses the <strong>HTML Container Protocol</strong> (<code>&lt;script data-file=\"...\" data-method=\"...\" data-action=\"patch\"&gt;</code>). An LLM streams back surgical method patches, which Luno's in-browser Acorn AST patcher splices into disk or runtime memory in milliseconds. This eliminates token bloat and allows continuous development loops directly through the clipboard.
+      <br><br>
+      Across our home fleet, Luno operates as a <strong>Port 8080 Federation</strong>, enabling zero-password HTTP synchronization between the Mac Mini (<code>10.0.0.226:8080</code>) and the Ubuntu Linux laptop (<code>10.0.0.245:8080</code>).
+    </p>
+
+    <aside data-block="sidebar_q4_mesh" data-type="sidebar">
+      <span class="sidebar-kicker">Fleet Infrastructure</span>
+      <strong class="sidebar-title">Universal Port 8080 &amp; Zero-Token Dev Loop</strong>
+      <ul>
+        <li><strong>Universal Port 8080:</strong> Complete elimination of legacy port 3000 remnants across all configs.</li>
+        <li><strong>HTML Container Protocol:</strong> Client-side Acorn AST method splicing.</li>
+        <li><strong>Dynamic Subnet Discovery:</strong> Auto-detects peer machines on 10.0.0.x without static IP assumptions.</li>
+        <li><strong>Zero-Leak Credentials:</strong> Passwords stored in local environment files, never pasted to prompts.</li>
+        <li><strong>Primary Repositories:</strong> <code>HomeSetup</code>, <code>Luno</code>, <code>Library</code>.</li>
+      </ul>
+    </aside>
+  </section>
+</article>

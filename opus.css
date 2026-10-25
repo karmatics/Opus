@@ -1,0 +1,98 @@
+:root {
+  --op-bg: #070a13;
+  --op-surface: #0d1117;
+  --op-card: #161b22;
+  --op-border: #21262d;
+  --op-cyan: #00f2fe;
+  --op-green: #10b981;
+  --op-amber: #f59e0b;
+  --op-purple: #c084fc;
+  --op-rose: #ef4444;
+  --op-font-sans: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
+  --op-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070a13;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--op-cyan);
+}
+
+.op-sidebar-search {
+  width: 100%;
+  background: #070a13;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: #00f2fe;
+  font-family: var(--op-font-mono);
+  font-size: 11px;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+.op-sidebar-search:focus {
+  border-color: #00f2fe;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.35);
+}
+
+.op-chapter-card {
+  background: rgba(22, 27, 34, 0.6);
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 6px;
+}
+.op-chapter-card:hover {
+  border-color: rgba(0, 242, 254, 0.45);
+  background: rgba(22, 27, 34, 0.95);
+}
+.op-chapter-card.active {
+  background: rgba(0, 242, 254, 0.08);
+  border-color: #00f2fe;
+  box-shadow: inset 3px 0 0 #00f2fe, 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.dr-block-sidebar {
+  margin: 24px 0 !important;
+  padding: 16px 20px !important;
+  background: #0d1117 !important;
+  border-left: 4px solid #00f2fe !important;
+  border-top: 1px solid #1e293b !important;
+  border-right: 1px solid #1e293b !important;
+  border-bottom: 1px solid #1e293b !important;
+  border-radius: 0 10px 10px 0 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+.dr-sidebar-kicker {
+  font-family: var(--op-font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #00f2fe !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  margin-bottom: 6px !important;
+}
+.dr-sidebar-title {
+  font-family: var(--op-font-sans) !important;
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+  color: #f8fafc !important;
+  margin-bottom: 8px !important;
+}
+.dr-sidebar-body {
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
+  color: #cbd5e1 !important;
+}
