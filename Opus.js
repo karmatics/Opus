@@ -8,55 +8,55 @@ class Opus {
   }
 
   async run(env) {
-    if (this.rootElement) {
-      this.destroy();
-    }
+        if (this.rootElement) {
+          this.destroy();
+        }
 
-    if (!env || !env.container) {
-      throw new Error('[Opus] run() requires an environment object with a valid container.');
-    }
+        if (!env || !env.container) {
+          throw new Error('[Opus] run() requires an environment object with a valid container.');
+        }
 
-    this.env = env;
-    this.rootElement = env.container;
+        this.env = env;
+        this.rootElement = env.container;
 
-    document.documentElement.style.overflowY = 'auto';
-    document.body.style.overflowY = 'auto';
+        document.documentElement.style.overflowY = 'auto';
+        document.body.style.overflowY = 'auto';
 
-    this.rootElement.style.overflowX = 'hidden';
-    this.rootElement.style.overflowY = 'visible';
-    this.rootElement.style.height = 'auto';
-    this.rootElement.style.minHeight = '100vh';
-    this.rootElement.style.boxSizing = 'border-box';
-    this.rootElement.style.marginLeft = '0px';
-    this.rootElement.style.width = '100%';
+        this.rootElement.style.overflowX = 'hidden';
+        this.rootElement.style.overflowY = 'visible';
+        this.rootElement.style.height = 'auto';
+        this.rootElement.style.minHeight = '100vh';
+        this.rootElement.style.boxSizing = 'border-box';
+        this.rootElement.style.marginLeft = '0px';
+        this.rootElement.style.width = '100%';
 
-    const pages = [
-      { id: 'overview', title: '0. Master Opus Gateway & 4-Quadrant Portal', docClass: () => globalThis.OpusOverviewContent },
-      { id: 'q1_cad', title: '1. Inventions & Spatial CAD (CadPlan, accuCad, accudraw)', docClass: () => globalThis.OpusQ1CadContent },
-      { id: 'q2_narrative', title: '2. Personal Narrative & Forensic Valuation (situation, ValuationOfAccudraw)', docClass: () => globalThis.OpusQ2NarrativeContent },
-      { id: 'q3_economics', title: '3. Post-Labor Macro-Economics & Robot Dividend (EconomicsOfAutomation, JobsAndAI)', docClass: () => globalThis.OpusQ3EconomicsContent },
-      { id: 'q4_cockpit', title: '4. Fleet Infrastructure & Cockpit (HomeSetup, Luno, Library)', docClass: () => globalThis.OpusQ4CockpitContent }
-    ];
+        const pages = [
+          { id: 'overview', title: '0. Master Opus Gateway & 4-Quadrant Portal', docClass: () => globalThis.OpusOverviewContent },
+          { id: 'verification', title: '1. Economic Impact & Public Verification', docClass: () => globalThis.OpusVerificationContent },
+          { id: 'q1_cad', title: '2. Inventions & Spatial CAD (CadPlan, accuCad, accudraw)', docClass: () => globalThis.OpusQ1CadContent },
+          { id: 'q2_narrative', title: '3. Personal Narrative & Legal Reality (situation, ValuationOfAccudraw)', docClass: () => globalThis.OpusQ2NarrativeContent },
+          { id: 'q3_economics', title: '4. Post-Labor Macro-Economics & Robot Dividend (EconomicsOfAutomation, JobsAndAI)', docClass: () => globalThis.OpusQ3EconomicsContent },
+          { id: 'q4_cockpit', title: '5. Fleet Infrastructure & Cockpit (HomeSetup, Luno, Library)', docClass: () => globalThis.OpusQ4CockpitContent }
+        ];
 
-    this.reader = new DocumentReader({
-      container: env.container,
-      brandTitle: 'Rob Brown Opus • Master Living Portal',
-      brandIcon: '🏛️',
-      dossierId: 'Opus',
-      pages: pages
-    });
+        this.reader = new DocumentReader({
+          container: env.container,
+          brandTitle: 'Rob Brown Opus • Master Living Portal',
+          brandIcon: '🏛️',
+          dossierId: 'Opus',
+          pages: pages
+        });
 
-    await this.reader.init();
+        await this.reader.init();
 
-    if (typeof SidePanel !== 'undefined') {
-      this.sidePanel = new SidePanel('left', 320, null);
-      this._buildSidePanelNavigation(pages);
-      this.sidePanel.open();
-    }
+        if (typeof SidePanel !== 'undefined') {
+          this.sidePanel = new SidePanel('left', 340, null);
+          this._buildSidePanelNavigation(pages);
+          this.sidePanel.open();
+        }
 
-    return this;
-  }
-
+        return this;
+      }
   _buildSidePanelNavigation(pages) {
     if (!this.sidePanel) return;
 

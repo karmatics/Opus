@@ -1,41 +1,49 @@
 class OpusQ2NarrativeContent {
   static getMeta() {
     return {
-      kicker: 'Quadrant II • Valuation & Reality',
-      title: '2. Personal Narrative & Forensic Valuation (situation, ValuationOfAccudraw)',
-      subtitle: 'The documented contrast between creating $5.0B–$6.5B in corporate value versus living on food stamps, caretaker bias, and daughter custody separation.'
+      kicker: 'Quadrant II • Personal Narrative & Legal Reality',
+      title: '3. Personal Narrative & Legal Reality (situation, ValuationOfAccudraw)',
+      subtitle: 'The documented contrast between creating billions in corporate value versus living on food stamps, power-of-attorney interference, and daughter custody estrangement.'
     };
   }
 
   static manifest() {
     return [
       {
-        section: 'q2_overview',
-        partLabel: 'Quadrant II • Life & Valuation',
-        title: 'Forensic Accounting & The Personal Struggle',
+        section: 'personal_reality_section',
+        partLabel: 'Chapter 3 • Reality',
+        title: 'The Documented Contrast: Enterprise Wealth vs. Personal Deprivation',
         blocks: [
-          { id: 'p_q2_summary_1', type: 'p' },
-          { id: 'sidebar_q2_facts', type: 'sidebar', kicker: 'Forensic Summary', title: 'Valuation Metrics & Legal Reality' }
+          { id: 'p_q2_reality_1', type: 'p' },
+          { id: 'p_q2_reality_2', type: 'p' },
+          { id: 'sidebar_q2_legal_truth', type: 'sidebar', kicker: 'Legal & Personal Facts', title: 'The Facts of the Situation (Dossier Reference)' }
         ]
       }
     ];
   }
 
-  static p_q2_summary_1() {
+  static p_q2_reality_1() {
     return [
-      "The contrast in my life is stark and documented. On one hand, my software inventions anchored the core anti-churn moat for Bentley Systems, locking in 48 out of 50 U.S. State Departments of Transportation and contributing an estimated **$5.0 Billion to $6.5 Billion** of the company's enterprise market capitalization.",
-      "On the other hand, I currently survive on family assistance, food stamps, and a fraction of Social Security. The `situation` repository documents the legal, medical, and personal reality: years of uncompensated elder caregiving, caretaker bias in family disputes, severe financial hardship, and the painful estrangement from my daughter.",
-      "This quadrant is not an appeal for pity—it is an undeniable, forensic presentation of truth. The goal is achieving the visibility and financial restitution required to solve this life situation and reconnect with my daughter."
+      "The contrast in my life is stark, documented, and completely devoid of self-pity: on one hand, my software inventions anchored the core anti-churn moat for Bentley Systems, locking in 48 out of 50 U.S. State Departments of Transportation and contributing an estimated $1.2 Billion to $3.6 Billion to the company's enterprise market capitalization.",
+      "On the other hand, I currently survive on family assistance, SNAP food stamps, and a fraction of Social Security."
     ];
   }
 
-  static sidebar_q2_facts() {
+  static p_q2_reality_2() {
     return [
-      "Quadrant II Forensic Dossier Facts:\n" +
-      "• Enterprise Attribution: $5.0B to $6.5B of Bentley's ~$11B–$12B market cap attributed to AccuDraw neuromuscular lock-in.\n" +
-      "• MicroStation 95 Window: Saved Bentley from hostile acquisition or displacement during the AutoCAD R13 crisis.\n" +
-      "• The Human Reality: Food stamps, elder caregiving sacrifices, legal estrangement from daughter.\n" +
-      "• Primary Repositories: `situation`, `ValuationOfAccudraw`."
+      "Clarifying the Family & Caregiving Reality: To be completely clear regarding my personal circumstances: I am not a caregiver. My sister is the caregiver, and she holds power of attorney (POA) over our mother's affairs.",
+      "My mother has always recognized my contributions, loved me, and repeatedly expressed her desire to support me financially. However, my sister has weaponized her POA privileges to control the family finances, block my mother from sending financial help my way, and actively interfere in my relationship with my mother. I have been forced to accept outside assistance and live in poverty while my sister controls the resources and blocks access.",
+      "The complete, unvarnished record is documented in the situation repository: the timeline of POA interference, family conflict, legal hurdles, financial distress, and the deepest tragedy of all—the prolonged estrangement and custody separation from my daughter."
+    ];
+  }
+
+  static sidebar_q2_legal_truth() {
+    return [
+      "The Facts of the Situation (Dossier Reference):\n" +
+      "• No Caregiving Role: Rob Brown is not a caregiver; his sister acts as caregiver and holds Power of Attorney.\n" +
+      "• Financial Blocking: His mother has actively wanted to help him, but his sister has used her POA authority to obstruct and prevent support.\n" +
+      "• Survival on Assistance: Living on SNAP food stamps despite having generated billions in commercial software equity.\n" +
+      "• The Ultimate Mission: Securing recognition and financial solvency to overcome this forced dependency, resolve the family situation, and reunite with his daughter."
     ];
   }
 }

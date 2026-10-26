@@ -1,6 +1,6 @@
 {
   "name": "Opus",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Master Public Navigation Portal & Tiered Living Knowledge Router for Rob Brown's Inventions, Life Work, and Economic Models",
   "type": "luno-web-app",
   "mainClass": "Opus",
@@ -12,6 +12,7 @@
   "main": [
     "js/OpusRouterComponent.js",
     "js/OpusOverviewContent.js",
+    "js/OpusVerificationContent.js",
     "js/OpusQ1CadContent.js",
     "js/OpusQ2NarrativeContent.js",
     "js/OpusQ3EconomicsContent.js",
@@ -29,26 +30,39 @@
     "opus.css"
   ],
   "visibilitySets": {
-    "portal-lean": [
-      "Opus.js",
-      "js/OpusRouterComponent.js",
-      "content/overview.html",
+    "verification-focus": [
+      "content/verification.html",
+      "js/OpusVerificationContent.js",
+      "content/q2_narrative.html",
+      "js/OpusQ2NarrativeContent.js",
       "luno.json"
     ],
     "full-portal": [
       "Opus.js",
       "js/OpusRouterComponent.js",
       "js/OpusOverviewContent.js",
+      "js/OpusVerificationContent.js",
       "js/OpusQ1CadContent.js",
       "js/OpusQ2NarrativeContent.js",
       "js/OpusQ3EconomicsContent.js",
       "js/OpusQ4CockpitContent.js",
       "content/overview.html",
+      "content/verification.html",
       "content/q1_cad.html",
       "content/q2_narrative.html",
       "content/q3_economics.html",
       "content/q4_cockpit.html",
       "luno.json"
     ]
+  },
+  "processedCountSinceCheckpoint": 21,
+  "changedMethods": {
+    "luno.json": "2026-10-26T00:23:23.413Z",
+    "Opus.js": "2026-10-26T02:14:06.851Z",
+    "content/verification.html": "2026-10-26T02:14:06.851Z",
+    "js/OpusVerificationContent.js": "2026-10-26T02:14:06.851Z",
+    "content/q2_narrative.html": "2026-10-26T00:23:23.413Z",
+    "js/OpusQ2NarrativeContent.js": "2026-10-26T00:23:23.413Z",
+    "js/OpusEconomicImpactComponent.js": "2026-10-26T01:57:23.452Z"
   }
 }
