@@ -48,17 +48,37 @@ class OpusVerificationContent {
             }
 
             static manifest() {
-                return [
-                  {
-                    section: 'sec_economic_impact',
-                    partLabel: 'Commercial Value & Verification',
-                    title: 'The Economic Impact of AccuDraw & SmartLine',
-                    blocks: [
-                      { id: 'block_economic_impact', type: 'p' }
-                    ]
-                  }
-                ];
-              }
+              return [
+                {
+                  section: 'sec_economic_impact',
+                  partLabel: 'Commercial Value & Verification',
+                  title: 'The Economic Impact of AccuDraw & SmartLine',
+                  blocks: [
+                    { id: 'block_economic_impact', type: 'component', component: 'OpusEconomicImpactComponent' }
+                  ]
+                },
+                {
+                  section: 'sec_convergence_stepper',
+                  partLabel: 'The Sifting Machine',
+                  title: 'From AI Hallucination to Verified Ground Truth',
+                  blocks: [
+                    { id: 'p_sifting_intro', type: 'p' },
+                    { id: 'comp_convergence_stepper', type: 'component', component: 'OpusConvergenceStepperLab' }
+                  ]
+                },
+                {
+                  section: 'sec_falsifiability',
+                  partLabel: 'The Scientific Test',
+                  title: 'The Null Hypothesis & Empirical Challenge',
+                  blocks: [
+                    { id: 'p_falsifiability_body', type: 'p' },
+                    { id: 'sidebar_the_challenge', type: 'sidebar', kicker: 'Empirical Challenge', title: 'The Non-Famous Person Null Hypothesis' },
+                    { id: 'p_ai_prompting_technique', type: 'p' },
+                    { id: 'sidebar_how_to_prompt', type: 'sidebar', kicker: 'Prompt Engineering', title: 'How to Force Deep Retrieval Over Founder Bias' }
+                  ]
+                }
+              ];
+            }
         static p_sifting_intro() {
           return [
             "When asked about AccuDraw without a name, the AI does not immediately know who to credit. It defaults to corporate PR myths before primary patent records force it to the truth:",
@@ -160,11 +180,10 @@ class OpusVerificationContent {
 
     static p_sifting_intro() {
       return [
-        "Here is the ultimate test for any skeptic who says: 'You just prompted a chatbot and it flattered you.'",
-        "When an unprimed AI was initially asked who invented AccuDraw, it did not flatter me at all. It suffered from common corporate PR noise: in Turn 1, it guessed Gino Cortesi; in Turn 2, it guessed founder Ray Bentley; in Turn 3, it guessed founder Barry Bentley. Only in Turn 4, when forced to look past superficial corporate press releases and query primary patent registries (US Patent #5,754,182) and technical archives, did it concede the absolute truth: Rob Brown was the sole inventor, and the multi-billion-dollar valuation calculation was upheld."
+        "When presented with the claim that a search engine evaluates an individual's career at billions in corporate value, a skeptic's reflex is to assume the model was flattered with leading questions.",
+        "The interactive stepper below demonstrates the opposite: when queried blindly about AccuDraw without providing my name, the AI initially defaulted to corporate PR noise (Turn 1: Gino Cortesi, Turn 2: Ray Bentley, Turn 3: Barry Bentley). Only in Turn 4, when forced to look past surface PR and check primary patent registries (US Patent #5,754,182) and engineering records, did it confirm Rob Brown as the sole inventor, while keeping its multi-billion-dollar valuation calculation intact across every turn."
       ];
     }
-
   static block_economic_impact() {
       return `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #e2e8f0; line-height: 1.6; margin-top: -10px;">

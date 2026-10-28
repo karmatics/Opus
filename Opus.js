@@ -8,55 +8,75 @@ class Opus {
   }
 
   async run(env) {
-        if (this.rootElement) {
-          this.destroy();
-        }
+    if (this.rootElement) {
+      this.destroy();
+    }
 
-        if (!env || !env.container) {
-          throw new Error('[Opus] run() requires an environment object with a valid container.');
-        }
+    if (!env || !env.container) {
+      throw new Error('[Opus] run() requires an environment object with a valid container.');
+    }
 
-        this.env = env;
-        this.rootElement = env.container;
+    this.env = env;
+    this.rootElement = env.container;
 
-        document.documentElement.style.overflowY = 'auto';
-        document.body.style.overflowY = 'auto';
+    // Make Opus instance globally discoverable by DocumentReader and hotkeys
+    globalThis._opusInstance = this;
+    globalThis._cadPlanInstance = this;
 
-        this.rootElement.style.overflowX = 'hidden';
-        this.rootElement.style.overflowY = 'visible';
-        this.rootElement.style.height = 'auto';
-        this.rootElement.style.minHeight = '100vh';
-        this.rootElement.style.boxSizing = 'border-box';
-        this.rootElement.style.marginLeft = '0px';
-        this.rootElement.style.width = '100%';
+    document.documentElement.style.overflowY = 'auto';
+    document.body.style.overflowY = 'auto';
 
-        const pages = [
-          { id: 'overview', title: '0. Master Opus Gateway & 4-Quadrant Portal', docClass: () => globalThis.OpusOverviewContent },
-          { id: 'verification', title: '1. Economic Impact & Public Verification', docClass: () => globalThis.OpusVerificationContent },
-          { id: 'q1_cad', title: '2. Inventions & Spatial CAD (CadPlan, accuCad, accudraw)', docClass: () => globalThis.OpusQ1CadContent },
-          { id: 'q2_narrative', title: '3. Personal Narrative & Legal Reality (situation, ValuationOfAccudraw)', docClass: () => globalThis.OpusQ2NarrativeContent },
-          { id: 'q3_economics', title: '4. Post-Labor Macro-Economics & Robot Dividend (EconomicsOfAutomation, JobsAndAI)', docClass: () => globalThis.OpusQ3EconomicsContent },
-          { id: 'q4_cockpit', title: '5. Fleet Infrastructure & Cockpit (HomeSetup, Luno, Library)', docClass: () => globalThis.OpusQ4CockpitContent }
-        ];
+    this.rootElement.style.overflowX = 'hidden';
+    this.rootElement.style.overflowY = 'visible';
+    this.rootElement.style.height = 'auto';
+    this.rootElement.style.minHeight = '100vh';
+    this.rootElement.style.boxSizing = 'border-box';
+    this.rootElement.style.marginLeft = '0px';
+    this.rootElement.style.width = '100%';
 
-        this.reader = new DocumentReader({
-          container: env.container,
-          brandTitle: 'Rob Brown Opus • Master Living Portal',
-          brandIcon: '🏛️',
-          dossierId: 'Opus',
-          pages: pages
-        });
+    const pages = [
+      { id: 'overview', title: '0. Master Opus Gateway & 4-Quadrant Portal', docClass: () => globalThis.OpusOverviewContent },
+      { id: 'verification', title: '1. Economic Impact & Public Verification', docClass: () => globalThis.OpusVerificationContent },
+      { id: 'q1_cad', title: '2. Inventions & Spatial CAD (CadPlan, accuCad, accudraw)', docClass: () => globalThis.OpusQ1CadContent },
+      { id: 'q2_narrative', title: '3. Personal Narrative & Legal Reality (situation, ValuationOfAccudraw)', docClass: () => globalThis.OpusQ2NarrativeContent },
+      { id: 'q3_economics', title: '4. Post-Labor Macro-Economics & Robot Dividend (EconomicsOfAutomation, JobsAndAI)', docClass: () => globalThis.OpusQ3EconomicsContent },
+      { id: 'q4_cockpit', title: '5. Fleet Infrastructure & Cockpit (HomeSetup, Luno, Library)', docClass: () => globalThis.OpusQ4CockpitContent },
+      { id: 'strategy', title: '6. Grand Strategy: Guerrilla Playbook & Living Loop', docClass: () => globalThis.OpusGrandStrategyContent }
+    ];
 
-        await this.reader.init();
+    this.reader = new DocumentReader({
+      container: env.container,
+      brandTitle: 'Rob Brown Opus • Master Living Portal',
+      brandIcon: '🏛️',
+      dossierId: 'Opus',
+      pages: pages,
+      itemNotes: globalThis.CadPlanItemNotes || null
+    });
 
-        if (typeof SidePanel !== 'undefined') {
-          this.sidePanel = new SidePanel('left', 340, null);
-          this._buildSidePanelNavigation(pages);
-          this.sidePanel.open();
-        }
+    await this.reader.init();
 
-        return this;
+    // Initialize Aardvark in-situ element inspector
+    if (typeof CadPlanAardvark !== 'undefined') {
+      this.aardvark = new CadPlanAardvark({
+        container: env.container,
+        dossierId: 'Opus',
+        itemNotes: globalThis.CadPlanItemNotes || null,
+        documentReader: this.reader
+      });
+      this.aardvark.init();
+      if (this.reader) {
+        this.reader.aardvark = this.aardvark;
       }
+    }
+
+    if (typeof SidePanel !== 'undefined') {
+      this.sidePanel = new SidePanel('left', 340, null);
+      this._buildSidePanelNavigation(pages);
+      this.sidePanel.open();
+    }
+
+    return this;
+  }
   _buildSidePanelNavigation(pages) {
     if (!this.sidePanel) return;
 
@@ -100,13 +120,17 @@ class Opus {
       const num = titleParts[0].trim();
       const title = titleParts.slice(1).join('.').trim() || page.title;
 
+      let badgeText = 'HUB';
+      if (idx === 6) badgeText = 'STRAT';
+      else if (idx > 0) badgeText = 'Q-' + idx;
+
       card.innerHTML = `
         <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px;">
           <div style="display:flex; align-items:flex-start; gap:6px; flex:1;">
             <span style="font-family:monospace; font-weight:bold; color:#00f2fe; font-size:11px;">${num}.</span>
             <span style="font-size:11.5px; font-weight:bold; color:#f8fafc; line-height:1.35;">${title}</span>
           </div>
-          <span style="font-size:9px; color:#64748b; font-family:monospace; flex-shrink:0;">${idx === 0 ? 'HUB' : 'Q-' + idx}</span>
+          <span style="font-size:9px; color:#64748b; font-family:monospace; flex-shrink:0;">${badgeText}</span>
         </div>
       `;
 
@@ -114,7 +138,6 @@ class Opus {
       container.appendChild(card);
     });
   }
-
   selectChapter(pageId, targetBlockId = null) {
     this.activePageId = pageId;
 
@@ -140,6 +163,10 @@ class Opus {
   }
 
   destroy() {
+    if (this.aardvark) {
+      this.aardvark.destroy();
+      this.aardvark = null;
+    }
     if (this.sidePanel) {
       this.sidePanel.destroy();
       this.sidePanel = null;
@@ -148,6 +175,8 @@ class Opus {
       this.reader.destroy();
       this.reader = null;
     }
+    if (globalThis._opusInstance === this) globalThis._opusInstance = null;
+    if (globalThis._cadPlanInstance === this) globalThis._cadPlanInstance = null;
     this.rootElement = null;
   }
 }

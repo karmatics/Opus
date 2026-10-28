@@ -27,6 +27,80 @@
   background: var(--op-cyan);
 }
 
+/* Clear visual note badges on annotated blocks */
+[data-block] {
+  position: relative;
+  transition: background-color 0.15s ease;
+}
+[data-block]:hover {
+  background: rgba(0, 242, 254, 0.02);
+}
+
+/* Floating Gutter Note Trigger Button: Always accessible */
+.dr-gutter-note-btn {
+  position: absolute;
+  left: -32px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #38bdf8;
+  color: #00f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  opacity: 0.3;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 20;
+}
+[data-block]:hover .dr-gutter-note-btn,
+.dr-gutter-note-btn:hover {
+  opacity: 1;
+  transform: scale(1.15);
+  border-color: #00f2fe;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+/* High-contrast note badge when an item has active notes */
+.dr-block-note-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 242, 254, 0.15);
+  border: 1px solid #00f2fe;
+  color: #00f2fe;
+  font-family: var(--op-font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.dr-block-note-badge:hover {
+  background: #00f2fe;
+  color: #070a13;
+}
+
+/* Outbox count pill */
+.luno-outbox-count-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #10b981;
+  color: #070a13;
+  font-weight: 800;
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 10px;
+  margin-left: 4px;
+}
+
 .op-sidebar-search {
   width: 100%;
   background: #070a13;
@@ -62,37 +136,4 @@
   background: rgba(0, 242, 254, 0.08);
   border-color: #00f2fe;
   box-shadow: inset 3px 0 0 #00f2fe, 0 4px 16px rgba(0, 0, 0, 0.5);
-}
-
-.dr-block-sidebar {
-  margin: 24px 0 !important;
-  padding: 16px 20px !important;
-  background: #0d1117 !important;
-  border-left: 4px solid #00f2fe !important;
-  border-top: 1px solid #1e293b !important;
-  border-right: 1px solid #1e293b !important;
-  border-bottom: 1px solid #1e293b !important;
-  border-radius: 0 10px 10px 0 !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
-}
-.dr-sidebar-kicker {
-  font-family: var(--op-font-mono) !important;
-  font-size: 0.72rem !important;
-  font-weight: 800 !important;
-  color: #00f2fe !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
-  margin-bottom: 6px !important;
-}
-.dr-sidebar-title {
-  font-family: var(--op-font-sans) !important;
-  font-size: 1.1rem !important;
-  font-weight: 800 !important;
-  color: #f8fafc !important;
-  margin-bottom: 8px !important;
-}
-.dr-sidebar-body {
-  font-size: 0.88rem !important;
-  line-height: 1.6 !important;
-  color: #cbd5e1 !important;
 }
