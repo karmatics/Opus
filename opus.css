@@ -27,7 +27,6 @@
   background: var(--op-cyan);
 }
 
-/* Clear visual note badges on annotated blocks */
 [data-block] {
   position: relative;
   transition: background-color 0.15s ease;
@@ -36,36 +35,24 @@
   background: rgba(0, 242, 254, 0.02);
 }
 
-/* Floating Gutter Note Trigger Button: Always accessible */
-.dr-gutter-note-btn {
-  position: absolute;
-  left: -32px;
-  top: 4px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid #38bdf8;
-  color: #00f2fe;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  opacity: 0.3;
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  z-index: 20;
-}
-[data-block]:hover .dr-gutter-note-btn,
-.dr-gutter-note-btn:hover {
+.dr-hover-action-pill .dr-gutter-note-btn {
+  position: static;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   opacity: 1;
-  transform: scale(1.15);
-  border-color: #00f2fe;
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+  color: var(--dr-text-subtle);
+  padding: 3px 6px;
+  font-size: 0.7rem;
+}
+.dr-hover-action-pill .dr-gutter-note-btn.has-notes {
+  color: var(--op-cyan);
+  font-weight: 800;
 }
 
-/* High-contrast note badge when an item has active notes */
 .dr-block-note-badge {
   display: inline-flex;
   align-items: center;
@@ -87,7 +74,6 @@
   color: #070a13;
 }
 
-/* Outbox count pill */
 .luno-outbox-count-pill {
   display: inline-flex;
   align-items: center;
@@ -123,8 +109,7 @@
   background: rgba(22, 27, 34, 0.6);
   border: 1px solid #21262d;
   border-radius: 8px;
-  padding: 8px 10px;
-  cursor: pointer;
+  overflow: hidden;
   transition: all 0.15s ease;
   margin-bottom: 6px;
 }
@@ -136,4 +121,42 @@
   background: rgba(0, 242, 254, 0.08);
   border-color: #00f2fe;
   box-shadow: inset 3px 0 0 #00f2fe, 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.op-chapter-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 8px 10px;
+  cursor: pointer;
+  user-select: none;
+  gap: 8px;
+}
+.op-chapter-header-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.op-chapter-sections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px 8px 8px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(5, 8, 17, 0.75);
+}
+
+.op-section-item {
+  color: #94a3b8;
+  font-size: 11px;
+  font-family: var(--op-font-sans);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 5px;
+  line-height: 1.4;
+  transition: all 0.15s ease;
+}
+.op-section-item:hover {
+  color: #00f2fe;
+  background: rgba(0, 242, 254, 0.1);
+  padding-left: 11px;
 }

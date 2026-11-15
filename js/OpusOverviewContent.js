@@ -42,18 +42,18 @@ class OpusOverviewContent {
   }
 
   static sidebar_4_quadrants_summary() {
-    return [
-      "The 4-Quadrant Architecture Map:\n" +
-      "• Quadrant I: Spatial CAD Inventions (`CadPlan`, `accuCad`, `accudraw`)\n" +
-      "  - AccuDraw 3D kinetic compass, SmartLine continuous chaining, on-curve splines, and US Patent #5,754,182.\n" +
-      "• Quadrant II: Personal Narrative & Valuation Reality (`situation`, `ValuationOfAccudraw`)\n" +
-      "  - The $5.0B–$6.5B Bentley valuation contribution vs. living on food stamps, caretaker bias, and parental alienation.\n" +
-      "• Quadrant III: Post-Labor Macro-Economics (`EconomicsOfAutomation`, `JobsAndAI`)\n" +
-      "  - The Robot Dividend, the Colony of 100,000, and mathematical models for surviving automation.\n" +
-      "• Quadrant IV: Operating Cockpit & Fleet Infrastructure (`HomeSetup`, `Luno`, `Library`)\n" +
-      "  - Universal Port 8080 LAN federation, zero-token clipboard container execution, and multi-node hardware topology."
-    ];
-  }
+      return [
+        "The 4-Quadrant Architecture Map:\n" +
+        "• Quadrant I: Spatial CAD Inventions (`CadPlan`, `accuCad`, `accudraw`)\n" +
+        "  - AccuDraw 3D kinetic compass, SmartLine continuous chaining, on-curve splines, and US Patent #5,754,182.\n" +
+        "• Quadrant II: Personal Narrative & Valuation Reality (`situation`, `ValuationOfAccudraw`)\n" +
+        "  - The $1.2B–$5.54B+ Bentley valuation contribution vs. Power of Attorney (POA) interference, forced financial hardship, elder advocacy, and daughter court/custody matters (living situation stabilized Nov 2026).\n" +
+        "• Quadrant III: Post-Labor Macro-Economics (`EconomicsOfAutomation`, `JobsAndAI`)\n" +
+        "  - The Robot Dividend, the Colony of 100,000, and mathematical models for surviving automation.\n" +
+        "• Quadrant IV: Operating Cockpit & Fleet Infrastructure (`HomeSetup`, `Luno`, `Library`)\n" +
+        "  - Universal Port 8080 LAN federation, zero-token clipboard container execution, and multi-node hardware topology."
+      ];
+    }
 }
 
 globalThis.OpusOverviewContent = OpusOverviewContent;

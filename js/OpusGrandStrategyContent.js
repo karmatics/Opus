@@ -63,12 +63,12 @@ class OpusGrandStrategyContent {
         }
       ];
     }
-  static p_mission_personal() {
-    return [
-      "This project exists to achieve two deeply interconnected breakthroughs: personal restitution and civilizational progress. On the personal side, the objective is establishing an undeniable, publicly verifiable record of my software inventions (AccuDraw, SmartLine, US Patent #5,754,182) and the billions in commercial enterprise value they generated for Bentley Systems. For years, family Power of Attorney (POA) interference and financial isolation forced me to survive on SNAP food stamps and outside help while my mother's genuine desire to support me was blocked. Achieving public credit, financial self-sufficiency, and legal independence is the non-negotiable foundation to resolve this life situation and permanently reconnect with my daughter."
-    ];
-  }
 
+  static p_mission_personal() {
+      return [
+        "This project exists to achieve two deeply interconnected breakthroughs: personal restitution and civilizational progress. On the personal side, the objective is establishing an undeniable, publicly verifiable record of my software inventions (AccuDraw, SmartLine, US Patent #5,754,182) and the billions in commercial enterprise value they generated for Bentley Systems. I am not a caregiver; family Power of Attorney (POA) interference by my sister blocked my mother's expressed desire to support me financially, forcing years of hardship. With my day-to-day housing and utilities stabilized as of November 2026, current focus is on preparing daughter court filings, preserving the factual record, and achieving commercial independence."
+      ];
+    }
   static p_mission_civilizational() {
     return [
       "On the civilizational side, the mission is fixing the structural crises of the automated era. Traditional capitalism relies on human wage labor as its distribution ticket. As artificial intelligence and humanoid robotics obsolete sweat, that system breaks. My macroeconomic model—the Robot Dividend and the Colony of 100,000—proves with cold game theory that automated capital requires solvent domestic consumers to avoid economic realization collapse. Paired with Condorcet median-seeking voting and democratized spatial CAD tools, this architecture provides humanity with a practical, mathematically sound operating system for a post-labor world."

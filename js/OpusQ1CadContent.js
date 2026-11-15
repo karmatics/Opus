@@ -1,12 +1,12 @@
 class OpusQ1CadContent {
-  static getMeta() {
-    return {
-      kicker: 'Quadrant I • Spatial Inventions',
-      title: '1. Inventions & Spatial CAD (CadPlan, accuCad, accudraw)',
-      subtitle: '30-year proven AccuDraw floating 3D kinetic compass, SmartLine chaining, on-curve splines, and expired US Patent #5,754,182.'
-    };
-  }
 
+  static getMeta() {
+      return {
+        kicker: 'Quadrant I • Spatial Inventions',
+        title: '2. Inventions & Spatial CAD (CadPlan, accuCad, accudraw)',
+        subtitle: '30-year proven AccuDraw floating 3D kinetic compass, SmartLine chaining, on-curve splines, and expired US Patent #5,754,182.'
+      };
+    }
   static manifest() {
     return [
       {

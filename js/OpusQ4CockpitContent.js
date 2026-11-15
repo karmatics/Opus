@@ -1,12 +1,12 @@
 class OpusQ4CockpitContent {
-  static getMeta() {
-    return {
-      kicker: 'Quadrant IV • Fleet Cockpit',
-      title: '4. Fleet Infrastructure & Cockpit (HomeSetup, Luno, Library)',
-      subtitle: 'Multi-node LAN federation on Port 8080 connecting Mac and Linux, zero-token clipboard container execution, and living specification engines.'
-    };
-  }
 
+  static getMeta() {
+      return {
+        kicker: 'Quadrant IV • Fleet Cockpit',
+        title: '5. Fleet Infrastructure & Cockpit (HomeSetup, Luno, Library)',
+        subtitle: 'Multi-node LAN federation on Port 8080 connecting Mac and Linux, zero-token clipboard container execution, and living specification engines.'
+      };
+    }
   static manifest() {
     return [
       {

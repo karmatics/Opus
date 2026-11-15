@@ -1,12 +1,12 @@
 class OpusQ3EconomicsContent {
-  static getMeta() {
-    return {
-      kicker: 'Quadrant III • Post-Labor Economics',
-      title: '3. Post-Labor Macro-Economics & Robot Dividend (EconomicsOfAutomation, JobsAndAI)',
-      subtitle: 'A first-principles economic framework for surviving automation through the Robot Dividend, capital saturation, and labor phase-out.'
-    };
-  }
 
+  static getMeta() {
+      return {
+        kicker: 'Quadrant III • Post-Labor Economics',
+        title: '4. Post-Labor Macro-Economics & Robot Dividend (EconomicsOfAutomation, JobsAndAI)',
+        subtitle: 'A first-principles economic framework for surviving automation through the Robot Dividend, capital saturation, and labor phase-out.'
+      };
+    }
   static manifest() {
     return [
       {

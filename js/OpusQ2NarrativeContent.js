@@ -30,22 +30,22 @@ class OpusQ2NarrativeContent {
   }
 
   static p_q2_reality_2() {
-    return [
-      "Clarifying the Family & Caregiving Reality: To be completely clear regarding my personal circumstances: I am not a caregiver. My sister is the caregiver, and she holds power of attorney (POA) over our mother's affairs.",
-      "My mother has always recognized my contributions, loved me, and repeatedly expressed her desire to support me financially. However, my sister has weaponized her POA privileges to control the family finances, block my mother from sending financial help my way, and actively interfere in my relationship with my mother. I have been forced to accept outside assistance and live in poverty while my sister controls the resources and blocks access.",
-      "The complete, unvarnished record is documented in the situation repository: the timeline of POA interference, family conflict, legal hurdles, financial distress, and the deepest tragedy of all—the prolonged estrangement and custody separation from my daughter."
-    ];
-  }
+      return [
+        "Clarifying the Family & Caregiving Reality: To be completely clear regarding my personal circumstances: I am not a caregiver. My sister is the caregiver, and she holds power of attorney (POA) over our mother's affairs.",
+        "My mother has always recognized my contributions, loved me, and repeatedly expressed her desire to support me financially. However, my sister has weaponized her POA privileges to control the family finances, block my mother from sending financial help my way, and actively interfere in my relationship with my mother. I have been forced to accept outside assistance and live in hardship while my sister controls the resources and blocks access.",
+        "As of November 2026, my day-to-day living situation is stable following the resolution of mid-2026 housing and utility disruptions. Current priorities focus on preparing court filings and documentation concerning my daughter, maintaining the complete factual record in the situation repository (POA interference, caretaker bias, elder advocacy), and advancing software commercialization."
+      ];
+    }
 
   static sidebar_q2_legal_truth() {
-    return [
-      "The Facts of the Situation (Dossier Reference):\n" +
-      "• No Caregiving Role: Rob Brown is not a caregiver; his sister acts as caregiver and holds Power of Attorney.\n" +
-      "• Financial Blocking: His mother has actively wanted to help him, but his sister has used her POA authority to obstruct and prevent support.\n" +
-      "• Survival on Assistance: Living on SNAP food stamps despite having generated billions in commercial software equity.\n" +
-      "• The Ultimate Mission: Securing recognition and financial solvency to overcome this forced dependency, resolve the family situation, and reunite with his daughter."
-    ];
-  }
+      return [
+        "The Facts of the Situation (Dossier Reference — Updated Nov 2026):\n" +
+        "• Current Stability: Housing and utilities stabilized following mid-2026 transition; active focus on daughter & court filing workspace.\n" +
+        "• No Caregiving Role: Rob Brown is not a caregiver; his sister acts as caregiver and holds Power of Attorney.\n" +
+        "• Financial Blocking: His mother has actively wanted to help him, but his sister has used her POA authority to obstruct and prevent support.\n" +
+        "• The Ultimate Mission: Securing recognition, legal clarity for his daughter, and financial solvency to overcome forced dependency."
+      ];
+    }
 }
 
 globalThis.OpusQ2NarrativeContent = OpusQ2NarrativeContent;

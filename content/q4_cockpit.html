@@ -1,0 +1,105 @@
+<article data-page="q4_cockpit" data-dossier="Opus">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Quadrant IV • Fleet Cockpit</span>
+    <h1 class="dossier-title">5. Fleet Infrastructure &amp; Cockpit (HomeSetup, Luno, Library)</h1>
+    <p class="dossier-subtitle">Multi-node LAN federation on Port 8080 connecting Mac and Linux, zero-token clipboard container execution, and living specification engines.</p>
+  </header>
+
+  <section data-section="q4_overview">
+    <h2 class="section-title">Luno Workspace &amp; Port 8080 Federation</h2>
+
+    <p data-block="p_q4_summary_1">
+      To power this rapid development without expensive commercial toolchains or cloud dependencies, I built <strong>Luno Workspace</strong>—a phone-first development cockpit running locally on Node.js.
+      <br><br>
+      Luno uses the <strong>HTML Container Protocol</strong> (<code>&lt;script data-file="..." data-method="..." data-action="patch"&gt;</code>). An LLM streams back surgical method patches, which Luno's in-browser Acorn AST patcher splices into disk or runtime memory in milliseconds. This eliminates token bloat and allows continuous development loops directly through the clipboard.
+      <br><br>
+      Across our home fleet, Luno operates as a <strong>Port 8080 Federation</strong>, enabling zero-password HTTP synchronization between the Mac Mini (<code>10.0.0.226:8080</code>) and the Ubuntu Linux laptop (<code>10.0.0.245:8080</code>).
+    </p>
+
+    <aside data-block="sidebar_q4_mesh" data-type="sidebar">
+      <span class="sidebar-kicker">Fleet Infrastructure</span>
+      <strong class="sidebar-title">Universal Port 8080 &amp; Zero-Token Dev Loop</strong>
+      <ul>
+        <li><strong>Universal Port 8080:</strong> Complete elimination of legacy port 3000 remnants across all configs.</li>
+        <li><strong>HTML Container Protocol:</strong> Client-side Acorn AST method splicing.</li>
+        <li><strong>Dynamic Subnet Discovery:</strong> Auto-detects peer machines on 10.0.0.x without static IP assumptions.</li>
+        <li><strong>Zero-Leak Credentials:</strong> Passwords stored in local environment files, never pasted to prompts.</li>
+        <li><strong>Primary Repositories:</strong> <code>HomeSetup</code>, <code>Luno</code>, <code>Library</code>.</li>
+      </ul>
+    </aside>
+  </section>
+</article>
+</template>
+
+<template data-file="HomeSetup/content/topology.html">
+<article data-page="topology" data-dossier="HomeSetup">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Hardware Fleet Architecture</span>
+    <h1 class="dossier-title">0. Hardware Topology &amp; Fleet Matrix</h1>
+    <p class="dossier-subtitle">Real-world inventory: Mac Mini workstation, Ubuntu laptop, Windows deskbound PC, two mobile phones, and shared storage.</p>
+  </header>
+
+  <section data-section="fleet_overview">
+    <h2 class="section-title">Fleet Matrix &amp; Real-World Machine Profiles</h2>
+    <div data-block="comp_fleet_map" data-type="component" data-component="HomeFleetVisualizer"></div>
+
+    <p data-block="p_topo_intro_1">
+      This document records the exact physical and network architecture of my home workstation fleet. The machines are not identical clones—each has distinct physical constraints, battery health, and specialized software dependencies.
+      <br><br>
+      The setup currently centers around four physical compute points plus two mobile phones: the <strong>Ubuntu Linux laptop</strong> (portable workhorse and live demo rig), the <strong>Mac Mini workstation</strong> (living room, connected to the big dual monitors, holding ScreenFlow and primary Git pushes), the <strong>Windows laptop</strong> (dead battery, tethered 24/7 to the HP charger hub), and <strong>two smartphones</strong> (where Luno was originally developed, serving as primary dictation and review decks).
+    </p>
+
+    <p data-block="p_topo_intro_2">
+      Our fleet synchronization audit confirms the local repository layout on both primary development hosts: <code>/Users/rob/source/LunoProjects/</code> on the Mac Mini (<code>mac-mini-rob.local</code>) and <code>/home/rob/source/LunoProjects/</code> on the Ubuntu Linux laptop (<code>10.0.0.245:8080</code>). Over 50 projects—including <code>HomeSetup</code>, <code>Opus</code>, <code>CadPlan</code>, <code>accuCad</code>, <code>QuoraToys</code>, <code>situation</code>, <code>Library</code>, and <code>Luno</code>—are Git-initialized on branch <code>main</code>, wired to <code>karmatics</code> GitHub remotes, and deployed with <code>.nojekyll</code> active on GitHub Pages.
+      <br><br>
+      Both machines run Luno <code>v3.8.0</code> on <strong>Port 8080</strong>, enabling zero-password HTTP peer discovery and live synchronization across the local Wi-Fi mesh without manual SSH.
+    </p>
+
+    <aside data-block="sidebar_fleet_roles" data-type="sidebar">
+      <span class="sidebar-kicker">Fleet Hardware Reality</span>
+      <strong class="sidebar-title">Machine Roles, Power &amp; Physical Placement</strong>
+      <ul>
+        <li><strong>1. Ubuntu Laptop (The New Workhorse):</strong> Old work laptop, wiped clean of Windows with Ubuntu installed. Great battery; ideal for traveling and live demos, and a strong candidate to drive the living room big monitors.</li>
+        <li><strong>2. Mac Mini Workstation (Living Room):</strong> Primary Apple Silicon host connected to the big monitors. Sole legacy dependency is ScreenFlow for video editing; all other work runs on either Mac or Linux.</li>
+        <li><strong>3. Windows Laptop (Deskbound):</strong> Dead battery (dies immediately if unplugged). Shares the large HP hub/dock charger from the Linux laptop; permanently tethered.</li>
+        <li><strong>4. Two Phones (Phone 1 &amp; Phone 2):</strong> Luno was conceived and developed first on a phone! Used for couch/bed review, one-handed navigation, and speech-to-text dictation notes.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section data-section="workstation_breakdown">
+    <h2 class="section-title">The Workstations: Ubuntu, Mac, Windows &amp; Mobile</h2>
+
+    <p data-block="p_topo_linux_1">
+      <strong>Ubuntu Laptop (Portable Workhorse &amp; Demo Rig):</strong> This machine is an old corporate laptop gifted to me, wiped clean of Windows and running Ubuntu. It is fast, clean, and has a healthy battery.
+      <br><br>
+      Crucially, because it is portable and runs a complete local Luno web server (<code>v3.8.0</code> on Port 8080), this is the machine I can unplug and take anywhere to give live, offline demos of Luno and our spatial software tools.
+    </p>
+
+    <p data-block="p_topo_mac_1">
+      <strong>Mac Mini Workstation (Living Room Big Monitors):</strong> The Mac Mini (<code>mac-mini-rob.local</code>) is wired to the big desktop monitors in the living room and holds synchronized GitHub deployment keys for our GitHub Pages sites.
+      <br><br>
+      The single major application holding me to macOS is <strong>ScreenFlow</strong> for screencasting and video production. Aside from ScreenFlow, my entire toolchain (Luno, Three.js, WebGL, Node.js, and living documentation) runs identically on both Mac and Linux.
+    </p>
+
+    <p data-block="p_topo_win_1">
+      <strong>Windows Laptop (Tethered Rig):</strong> This machine was my only laptop before getting the Ubuntu machine, but its battery is completely shot—it must remain plugged in 24/7 to avoid immediate shutdown. It relies on the large HP hub/dock charger from the Linux laptop (the only compatible charger I have). It stays parked on the desk for Windows-only tasks and legacy checks.
+    </p>
+
+    <p data-block="p_topo_phones_1">
+      <strong>The Two Phones (Mobile-First Luno Origins):</strong> A critical architectural truth of Luno is that <strong>I built Luno first on a smartphone</strong>. Mobile is not an afterthought or scaled-down viewport—Luno is specifically optimized for phone ergonomics.
+      <br><br>
+      When I am lounging on the couch or in bed, I don't need a bulky keyboard. I pull up Luno on the phone, browse the living document, highlight a section with Aardvark, tap the microphone button, and use voice dictation to leave technical directives. This works over home Wi-Fi and continues to function when I am away from the house.
+    </p>
+
+    <aside data-block="sidebar_mobile_deck" data-type="sidebar">
+      <span class="sidebar-kicker">Mobile-First Heritage</span>
+      <strong class="sidebar-title">Why Phones Are First-Class Luno Nodes</strong>
+      <ul>
+        <li><strong>Couch &amp; Bed Cadence:</strong> Reviewing long-form technical plans without keyboard fatigue.</li>
+        <li><strong>Touch + Voice Synergy:</strong> Tap block -&gt; tap mic -&gt; dictate thoughts in natural speech -&gt; auto-saved to IndexedDB.</li>
+        <li><strong>Away-from-Desk Continuity:</strong> Reading living documents on the go with zero laptop bulk.</li>
+      </ul>
+    </aside>
+  </section>
+</article>
