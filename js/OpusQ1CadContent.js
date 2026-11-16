@@ -24,11 +24,10 @@ class OpusQ1CadContent {
   static p_q1_summary_1() {
     return [
       "In the mid-1990s, while at Bentley Systems, I created **AccuDraw**, **SmartLine**, and **PowerSelector**. Prior to AccuDraw, drafting on computers was an exercise in frustration: users typed coordinate strings (`DX=10.5`, `@5<45`) or drew disposable scratch lines.",
-      "AccuDraw replaced this with a **floating kinetic coordinate compass** directly under the cursor that evaluated mouse motion, locked axes with single keystrokes without the Enter key, and allowed instant 3D plane rotations (`T` for Top, `F` for Front, `S` for Side, `V` for View). This invention became Bentley's first issued patent (US Patent #5,754,182) and anchored over $5.0B in enterprise value.",
+      "AccuDraw replaced this with a **floating kinetic coordinate compass** directly under the cursor that evaluated mouse motion, locked axes with single keystrokes without the Enter key, and allowed instant 3D plane rotations (`T` for Top, `F` for Front, `S` for Side, `V` for View). This invention became Bentley's first issued patent (US Patent #5,754,182) and anchored $1.2B–$5.54B+ in enterprise value.",
       "Today, with patents expired, we are democratizing this technology through open web standards, pairing it with CADCraft (clean-room pure-Rust AutoCAD architecture) and wireless mobile touch controllers."
     ];
   }
-
   static sidebar_q1_tech() {
     return [
       "Quadrant I Technical Core:\n" +

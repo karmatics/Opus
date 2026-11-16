@@ -20,7 +20,8 @@
     "js/OpusQ3EconomicsContent.js",
     "js/OpusQ4CockpitContent.js",
     "js/OpusGrandStrategyContent.js",
-    "Opus.js"
+    "Opus.js",
+    "js/OpusSummaries.js"
   ],
   "library": [
     "DomBasics.js",
@@ -32,7 +33,8 @@
     "CadPlanDataRegistry.js",
     "CadPlanItemNotes.js",
     "CadPlanDocumentEditor.js",
-    "CadPlanAardvark.js"
+    "CadPlanAardvark.js",
+    "SensitiveContextGate.js"
   ],
   "styles": [
     "opus.css"
@@ -47,29 +49,23 @@
     "gateway-router": [
       "Opus/js/OpusOverviewContent.js",
       "Opus/js/OpusRouterComponent.js",
-      "Opus/content/overview.html"
+      "Opus/js/OpusSummaries.js"
     ],
     "verification-impact": [
       "Opus/js/OpusVerificationContent.js",
       "Opus/js/OpusEconomicImpactComponent.js",
-      "Opus/js/OpusConvergenceStepperLab.js",
-      "Opus/content/verification.html"
+      "Opus/js/OpusConvergenceStepperLab.js"
     ],
     "quadrants-cad-narrative": [
       "Opus/js/OpusQ1CadContent.js",
-      "Opus/js/OpusQ2NarrativeContent.js",
-      "Opus/content/q1_cad.html",
-      "Opus/content/q2_narrative.html"
+      "Opus/js/OpusQ2NarrativeContent.js"
     ],
     "quadrants-econ-cockpit": [
       "Opus/js/OpusQ3EconomicsContent.js",
-      "Opus/js/OpusQ4CockpitContent.js",
-      "Opus/content/q3_economics.html",
-      "Opus/content/q4_cockpit.html"
+      "Opus/js/OpusQ4CockpitContent.js"
     ],
     "grand-strategy": [
-      "Opus/js/OpusGrandStrategyContent.js",
-      "Opus/content/strategy.html"
+      "Opus/js/OpusGrandStrategyContent.js"
     ],
     "notes-inspector": [
       "Library/CadPlanAardvark.js",
@@ -79,6 +75,10 @@
     ],
     "comments-community": [
       "Library/SupabaseCommentsAdapter.js"
+    ],
+    "summaries-only": [
+      "Opus/js/OpusSummaries.js",
+      "Opus/luno.json"
     ]
   }
 }

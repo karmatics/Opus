@@ -31,29 +31,28 @@ class OpusOverviewContent {
   }
 
   static p_overview_intro_2() {
-    return [
-      "Instead of forcing an LLM or human reader to ingest monolithic dumps, this portal provides **selective depth**:",
-      "• **Tier 0 (Synopsis):** Rapid 250-token executive orientations.",
-      "• **Tier 1 (Deep Narrative):** Thorough 1,200-token architectural syntheses informed directly by verified source repositories.",
-      "• **Tier 2 (Invariants & Math):** Exact formulas, direction cosines, and state machine transitions.",
-      "• **Tier 3 (File Manifest):** Precise file pointers so AI agents pull only the single file they are modifying.",
-      "Use the interactive router above to inspect any quadrant, copy customized prompt packages, or launch live 3D viewports."
-    ];
-  }
-
-  static sidebar_4_quadrants_summary() {
       return [
-        "The 4-Quadrant Architecture Map:\n" +
-        "• Quadrant I: Spatial CAD Inventions (`CadPlan`, `accuCad`, `accudraw`)\n" +
-        "  - AccuDraw 3D kinetic compass, SmartLine continuous chaining, on-curve splines, and US Patent #5,754,182.\n" +
-        "• Quadrant II: Personal Narrative & Valuation Reality (`situation`, `ValuationOfAccudraw`)\n" +
-        "  - The $1.2B–$5.54B+ Bentley valuation contribution vs. Power of Attorney (POA) interference, forced financial hardship, elder advocacy, and daughter court/custody matters (living situation stabilized Nov 2026).\n" +
-        "• Quadrant III: Post-Labor Macro-Economics (`EconomicsOfAutomation`, `JobsAndAI`)\n" +
-        "  - The Robot Dividend, the Colony of 100,000, and mathematical models for surviving automation.\n" +
-        "• Quadrant IV: Operating Cockpit & Fleet Infrastructure (`HomeSetup`, `Luno`, `Library`)\n" +
-        "  - Universal Port 8080 LAN federation, zero-token clipboard container execution, and multi-node hardware topology."
+        "Instead of forcing an LLM or human reader to ingest monolithic dumps, this portal provides **selective depth** (while **`Portal`** at `../Portal/index.html` serves as the friendly, visitor-ready public front page linking every domain together):",
+        "• **Tier 0 (Synopsis):** Rapid 250-token executive orientations.",
+        "• **Tier 1 (Deep Narrative):** Thorough 1,200-token architectural syntheses informed directly by verified source repositories.",
+        "• **Tier 2 (Invariants & Math):** Exact formulas, direction cosines, and state machine transitions.",
+        "• **Tier 3 (File Manifest):** Precise file pointers so AI agents pull only the single file they are modifying.",
+        "Use the interactive router above to inspect any quadrant, copy customized prompt packages, or launch live 3D viewports."
       ];
     }
+  static sidebar_4_quadrants_summary() {
+    return [
+      "The 4-Quadrant Architecture Map:\n" +
+      "• Quadrant I: Spatial CAD Inventions (`CadPlan`, `accuCad`, `accudraw`)\n" +
+      "  - AccuDraw 3D kinetic compass, SmartLine continuous chaining, on-curve splines, and US Patent #5,754,182.\n" +
+      "• Quadrant II: Personal Narrative & Valuation Reality (`situation`, `ValuationOfAccudraw`)\n" +
+      "  - The $1.2B–$5.54B+ Bentley valuation contribution vs. personal hardship, elder advocacy, and daughter court/custody matters (living situation stabilized Nov 2026; sensitive family context gated in Ch. 3).\n" +
+      "• Quadrant III: Post-Labor Macro-Economics (`EconomicsOfAutomation`, `JobsAndAI`)\n" +
+      "  - The Robot Dividend, the Colony of 100,000, and mathematical models for surviving automation.\n" +
+      "• Quadrant IV: Operating Cockpit & Fleet Infrastructure (`HomeSetup`, `Luno`, `Library`)\n" +
+      "  - Universal Port 8080 LAN federation, zero-token clipboard container execution, and multi-node hardware topology."
+    ];
+  }
 }
 
 globalThis.OpusOverviewContent = OpusOverviewContent;

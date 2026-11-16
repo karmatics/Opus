@@ -8,67 +8,68 @@ class OpusGrandStrategyContent {
   }
 
   static manifest() {
-      return [
-        {
-          section: 'sec_dual_mission',
-          partLabel: 'Chapter 6 • The Mission',
-          title: 'The Dual Mission: Personal Sovereignty & Civilizational Repair',
-          blocks: [
-            { id: 'p_mission_personal', type: 'p' },
-            { id: 'p_mission_civilizational', type: 'p' },
-            { id: 'sidebar_guerrilla_playbook', type: 'sidebar', kicker: 'Strategic Playbook', title: 'The Guerrilla Marketing & Distribution Flywheel' }
-          ]
-        },
-        {
-          section: 'sec_mobile_touch_hover',
-          partLabel: 'Chapter 6 • Ergonomics',
-          title: 'Solving the Mobile Touchscreen Dilemma: The Aardvark Glass Reticle',
-          blocks: [
-            { id: 'p_touch_hover_problem', type: 'p' },
-            { id: 'p_touch_hover_solution', type: 'p' },
-            { id: 'sidebar_touch_reticle_spec', type: 'sidebar', kicker: 'Mobile UI Spec', title: 'The Transparent Interaction Glass & Touch Reticle' }
-          ]
-        },
-        {
-          section: 'sec_fleet_sync',
-          partLabel: 'Chapter 6 • Infrastructure',
-          title: 'Universal Port 8080 Cross-Fleet Synchronization & Outbox Staging',
-          blocks: [
-            { id: 'p_fleet_sync_mesh', type: 'p' },
-            { id: 'sidebar_sync_endpoint_spec', type: 'sidebar', kicker: 'Network Protocol', title: 'The Shared Notes Ledger on Port 8080' },
-            { id: 'p_outbox_staging_pipeline', type: 'p' },
-            { id: 'sidebar_outbox_queue_spec', type: 'sidebar', kicker: 'Outbox Protocol', title: 'Accumulative Multi-Package Outbox Architecture' }
-          ]
-        },
-        {
-          section: 'sec_supabase_public',
-          partLabel: 'Chapter 6 • Cloud Architecture',
-          title: 'Public Deployment & Static Cloud Persistence (Supabase Relational Adapter)',
-          blocks: [
-            { id: 'p_supabase_public_arch', type: 'p' },
-            { id: 'sidebar_supabase_schema', type: 'sidebar', kicker: 'Cloud Relational Schema', title: 'Supabase PostgREST & Anonymous Client RLS' }
-          ]
-        },
-        {
-          section: 'sec_token_economy',
-          partLabel: 'Chapter 6 • AI Multiplier',
-          title: 'The Token Economy, Living Annotations & Multi-Tier Visibility Sets',
-          blocks: [
-            { id: 'p_token_economy_problem', type: 'p' },
-            { id: 'p_token_economy_solution', type: 'p' },
-            { id: 'sidebar_agent_rules_mandate', type: 'sidebar', kicker: 'LLM Operating Mandate', title: 'Rules for Incoming AI Agents: Context Budgeting & Compaction' },
-            { id: 'p_file_request_protocol', type: 'p' },
-            { id: 'sidebar_context_pull_checklist', type: 'sidebar', kicker: 'Context Retrieval', title: 'Full File Request Protocol & Zero-Guesswork Standard' }
-          ]
-        }
-      ];
-    }
+    return [
+      {
+        section: 'sec_dual_mission',
+        partLabel: 'Chapter 6 • The Mission',
+        title: 'The Dual Mission: Personal Sovereignty & Civilizational Repair',
+        blocks: [
+          { id: 'p_mission_personal', type: 'p' },
+          { id: 'p_mission_family_context', type: 'p', sensitive: true, sensitiveLabel: 'Family / POA Context Note' },
+          { id: 'p_mission_civilizational', type: 'p' },
+          { id: 'sidebar_guerrilla_playbook', type: 'sidebar', kicker: 'Strategic Playbook', title: 'The Guerrilla Marketing & Distribution Flywheel' }
+        ]
+      },
+      {
+        section: 'sec_mobile_touch_hover',
+        partLabel: 'Chapter 6 • Ergonomics',
+        title: 'Solving the Mobile Touchscreen Dilemma: The Aardvark Glass Reticle',
+        blocks: [
+          { id: 'p_touch_hover_problem', type: 'p' },
+          { id: 'p_touch_hover_solution', type: 'p' },
+          { id: 'sidebar_touch_reticle_spec', type: 'sidebar', kicker: 'Mobile UI Spec', title: 'The Transparent Interaction Glass & Touch Reticle' }
+        ]
+      },
+      {
+        section: 'sec_fleet_sync',
+        partLabel: 'Chapter 6 • Infrastructure',
+        title: 'Universal Port 8080 Cross-Fleet Synchronization & Outbox Staging',
+        blocks: [
+          { id: 'p_fleet_sync_mesh', type: 'p' },
+          { id: 'sidebar_sync_endpoint_spec', type: 'sidebar', kicker: 'Network Protocol', title: 'The Shared Notes Ledger on Port 8080' },
+          { id: 'p_outbox_staging_pipeline', type: 'p' },
+          { id: 'sidebar_outbox_queue_spec', type: 'sidebar', kicker: 'Outbox Protocol', title: 'Accumulative Multi-Package Outbox Architecture' }
+        ]
+      },
+      {
+        section: 'sec_supabase_public',
+        partLabel: 'Chapter 6 • Cloud Architecture',
+        title: 'Public Deployment & Static Cloud Persistence (Supabase Relational Adapter)',
+        blocks: [
+          { id: 'p_supabase_public_arch', type: 'p' },
+          { id: 'sidebar_supabase_schema', type: 'sidebar', kicker: 'Cloud Relational Schema', title: 'Supabase PostgREST & Anonymous Client RLS' }
+        ]
+      },
+      {
+        section: 'sec_token_economy',
+        partLabel: 'Chapter 6 • AI Multiplier',
+        title: 'The Token Economy, Living Annotations & Multi-Tier Visibility Sets',
+        blocks: [
+          { id: 'p_token_economy_problem', type: 'p' },
+          { id: 'p_token_economy_solution', type: 'p' },
+          { id: 'sidebar_agent_rules_mandate', type: 'sidebar', kicker: 'LLM Operating Mandate', title: 'Rules for Incoming AI Agents: Context Budgeting & Compaction' },
+          { id: 'p_file_request_protocol', type: 'p' },
+          { id: 'sidebar_context_pull_checklist', type: 'sidebar', kicker: 'Context Retrieval', title: 'Full File Request Protocol & Zero-Guesswork Standard' }
+        ]
+      }
+    ];
+  }
 
   static p_mission_personal() {
-      return [
-        "This project exists to achieve two deeply interconnected breakthroughs: personal restitution and civilizational progress. On the personal side, the objective is establishing an undeniable, publicly verifiable record of my software inventions (AccuDraw, SmartLine, US Patent #5,754,182) and the billions in commercial enterprise value they generated for Bentley Systems. I am not a caregiver; family Power of Attorney (POA) interference by my sister blocked my mother's expressed desire to support me financially, forcing years of hardship. With my day-to-day housing and utilities stabilized as of November 2026, current focus is on preparing daughter court filings, preserving the factual record, and achieving commercial independence."
-      ];
-    }
+    return [
+      "This project exists to achieve two deeply interconnected breakthroughs: personal restitution and civilizational progress. On the personal side, the objective is establishing an undeniable, publicly verifiable record of my software inventions (AccuDraw, SmartLine, US Patent #5,754,182) and the billions in commercial enterprise value they generated for Bentley Systems. With my day-to-day housing and utilities stabilized as of November 2026, current focus is on preparing daughter court filings, preserving the factual record, and achieving commercial independence."
+    ];
+  }
   static p_mission_civilizational() {
     return [
       "On the civilizational side, the mission is fixing the structural crises of the automated era. Traditional capitalism relies on human wage labor as its distribution ticket. As artificial intelligence and humanoid robotics obsolete sweat, that system breaks. My macroeconomic model—the Robot Dividend and the Colony of 100,000—proves with cold game theory that automated capital requires solvent domestic consumers to avoid economic realization collapse. Paired with Condorcet median-seeking voting and democratized spatial CAD tools, this architecture provides humanity with a practical, mathematically sound operating system for a post-labor world."
@@ -194,6 +195,12 @@ class OpusGrandStrategyContent {
         "• Relational Tables: `threads` (indexed by dossier, page, block), `comments` (with XPath locators and author directives), `community_profiles`, and `comment_votes`.\n" +
         "• Zero Local Exposure: The home LAN remains completely private behind NAT; GitHub Pages readers never ping home IPs.\n" +
         "• Offline / Local Dual Mode: If Supabase credentials are not supplied, the adapter automatically falls back to local storage and Port 8080 APIs."
+      ];
+    }
+
+  static p_mission_family_context() {
+      return [
+        "Additional Family Context: My sister serves as our mother's caregiver and holds Power of Attorney (POA), which was used to block my mother's expressed desire to support me financially, causing years of avoidable hardship documented in the `situation` dossier."
       ];
     }
 }
