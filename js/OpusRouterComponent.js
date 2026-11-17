@@ -369,130 +369,129 @@ class OpusRouterComponent {
   }
 
   static getCatalog() {
-      return [
-        {
-          quadrant: 'IV', name: 'Portal', title: 'Public Front Page & Live Summary Engine', color: '#00f2fe', icon: '🌐', url: '../Portal/index.html',
-          files: ['Portal/Portal.js', 'Portal/js/PortalData.js', 'Portal/js/PortalSummaryEngine.js', 'Portal/js/PortalModals.js', 'Portal/js/PortalDocContent.js'],
-          tiers: {
-            0: 'Visitor-ready public front page linking Luno, HomeSetup, Career/CAD, Financial Valuation, Family/Legal Context, and Post-Labor Economics.',
-            1: 'Presents clean, non-inflammatory summaries with interactive UITools dialogs, live file-scanning JSON summary generation (summaries.json), SensitiveContextGate protection for deeper POA notes, and 1-click AI export keys.',
-            2: 'Subsystems:\n• PortalSummaryEngine: Fetches sibling luno.json & *Summaries.js files to compile summaries.json\n• Dual Mode: Custom front-page UI + full DocumentReader view\n• Cross-Link Matrix: Anchors all 6 pillars cleanly.',
-            3: 'Key File Pointers in Portal/:\n• Portal/Portal.js\n• Portal/js/PortalData.js\n• Portal/js/PortalSummaryEngine.js\n• Portal/js/PortalModals.js\n• Portal/js/PortalDocContent.js'
+        return [
+          {
+            quadrant: 'IV', name: 'Portal', title: 'Public Front Page & Live Summary Engine', color: '#00f2fe', icon: '🌐', url: '../Portal/index.html',
+            files: ['Portal/Portal.js', 'Portal/js/PortalData.js', 'Portal/js/PortalSummaryEngine.js', 'Portal/js/PortalModals.js', 'Portal/js/PortalDocContent.js'],
+            tiers: {
+              0: 'Visitor-ready public front page linking Luno, HomeSetup, Career/CAD, Financial Valuation, Family/Legal Context, and Post-Labor Economics.',
+              1: 'Presents clean, non-inflammatory summaries with interactive UITools dialogs, live file-scanning JSON summary generation (summaries.json), SensitiveContextGate protection for deeper family/legal pages, and 1-click AI export keys.',
+              2: 'Subsystems:\n• PortalSummaryEngine: Fetches sibling luno.json & *Summaries.js files to compile summaries.json\n• Dual Mode: Custom front-page UI + full DocumentReader view\n• Cross-Link Matrix: Anchors all 6 pillars cleanly.',
+              3: 'Key File Pointers in Portal/:\n• Portal/Portal.js\n• Portal/js/PortalData.js\n• Portal/js/PortalSummaryEngine.js\n• Portal/js/PortalModals.js\n• Portal/js/PortalDocContent.js'
+            }
+          },
+          {
+            quadrant: 'I', name: 'CadPlan', title: 'Master CAD Specification & 3D Lab', color: '#00f2fe', icon: '📐', url: '../CadPlan/index.html',
+            files: ['CadPlan/js/CadPlanMetaContent.js', 'CadPlan/js/AccuCadAuditContent.js', 'CadPlan/js/CadITwinParityContent.js', 'CadPlan/js/CadStudioDemoComponent.js', 'CadPlan/js/curve/UpdateControlPoints.js'],
+            tiers: {
+              0: 'Rob Brown\'s 30-year proven AccuDraw spatial drafting engine, SmartLine continuous chaining, on-curve cubic Bézier splines, and 4-layer headless kernel.',
+              1: 'The living executable master specification for open-source 3D CAD. Bridges CADCraft (pure-Rust AutoCAD clone) with AccuDraw\'s floating kinetic compass, single-stroke 3D plane rotations (T, F, S, V), 50ms chorded tentative snapping, and 4-finger Z-elevation on mobile WebRTC touchpads.',
+              2: 'Mathematical Invariants:\n• 3x3 Direction-Cosine Basis (ThreeAxes): X_c, Y_c, Z_c\n• Model-Space Perpendicular Normal: P_proj = Origin + ((P_snap - Origin) · u) * u\n• SmartLine Two-Phase Arcs: Phase 1 (Center dashed circle), Phase 2 (Sweep committing DXF bulge tan(θ/4))\n• On-Curve Spline Relaxation: 8-iteration solver deriving G1 tangents without off-curve handles.',
+              3: 'Key File Pointers in CadPlan/:\n• CadPlan/js/CadPlanMetaContent.js\n• CadPlan/js/AccuCadAuditContent.js\n• CadPlan/js/CadITwinParityContent.js\n• CadPlan/js/CadStudioDemoComponent.js\n• CadPlan/js/curve/UpdateControlPoints.js'
+            }
+          },
+          {
+            quadrant: 'I', name: 'accuCad', title: 'Unified 3D WebGL Workstation', color: '#00f2fe', icon: '🏛️', url: '../accuCad/index.html',
+            files: ['accuCad/js/Main.js', 'accuCad/js/BaseController.js', 'accuCad/js/accudraw/AccuDrawLogic.js', 'accuCad/js/TentativePointHandler.js', 'accuCad/js/CameraOrbitAnimator.js'],
+            tiers: {
+              0: 'Production 3D CAD workstation with tentative snapping, direction-cosine matrix basis, and PBR clearcoat materials.',
+              1: 'Interactive CAD studio implementing Rob Brown\'s complete interaction loop: BaseController event pump, AccuDrawLogic constraint state machine, RoundingUtils3D vector fillets, and Line2 screen-space thick wireframes with motion parallax camera oscillation.',
+              2: 'Invariants & Algorithms:\n• GeneratePoint.generate(): Screen pixel unprojection to 3D ray\n• AccuDrawLogic.onMotion(): Smart Focus comparing |lx| vs |ly|\n• TentativePointHandler: 14px screen-space thick pick fallback\n• CameraOrbitAnimator: Monocular motion parallax wiggling eye vector R = ||D|| * 0.045.',
+              3: 'Key File Pointers in accuCad/:\n• accuCad/js/Main.js\n• accuCad/js/BaseController.js\n• accuCad/js/accudraw/AccuDrawLogic.js\n• accuCad/js/TentativePointHandler.js\n• accuCad/js/CameraOrbitAnimator.js'
+            }
+          },
+          {
+            quadrant: 'I', name: 'accudraw', title: '30-Year Historical Lore & Patents', color: '#00f2fe', icon: '📜', url: '../accudraw/index.html',
+            files: ['accudraw/js/AccuDrawArchiveApp.js', 'accudraw/js/AccuDrawData.js', 'accudraw/accudraw3d_page1.html'],
+            tiers: {
+              0: 'The historical archive of AccuDraw\'s invention at Bentley Systems, US Patent #5,754,182, and MicroStation Manager lore.',
+              1: 'Documents the 1994–1996 breakthrough that replaced command-line coordinate typing with a kinetic on-canvas compass and established Bentley Systems\' first issued corporate patent.',
+              2: 'Patents & Legal Status:\n• US Patent #5,371,845 (Intergraph, 1994): Dynamic constraint alignment\n• US Patent #5,754,182 (Bentley Systems, Issued 1998): Kinetic floating orientation frame\n• Exclusivity: Expired May 2018; core mathematics are public domain.',
+              3: 'Key File Pointers in accudraw/:\n• accudraw/js/AccuDrawArchiveApp.js\n• accudraw/js/AccuDrawData.js\n• accudraw/accudraw3d_page1.html'
+            }
+          },
+          {
+            quadrant: 'II', name: 'situation', title: 'Executive Career Dossier, Court Filing & Legal Reality', color: '#ef4444', icon: '⚖️', url: '../situation/index.html',
+            files: ['situation/js/SituationApp.js', 'situation/js/OverviewPage.js', 'situation/js/CourtFilingPage.js', 'situation/js/ElderAdvocacyPage.js', 'situation/js/CaretakerBiasPage.js', 'situation/js/ValuationPage.js', 'situation/luno.json'],
+            tiers: {
+              0: 'Updated Nov 2026 personal dossier: stable living situation, daughter & court filing workspace, gated family/legal pages, and $1.2B–$5.54B+ ($2.3B midpoint) IP valuation.',
+              1: 'Personal, professional, and legal dossier tracking November 2026 housing stability, court filing preparation for daughter matters, gated sensitive family/legal chapters (Elder Advocacy, Caretaker Bias, Court Filing), and 4-model AccuDraw valuation.',
+              2: 'Attribution & Dossier Structure:\n• Valuation Midpoint: $2.3B across Claude, Gemini, ChatGPT, and Grok ($1.2B–$5.54B+ counterfactual)\n• Court & Daughter Workspace: Living Directives-enabled stability & evidence preparation\n• Protected Chapters: Elder Advocacy, Caretaker Bias, and Court Filing pages gated behind SensitiveContextGate.',
+              3: 'Key File Pointers in situation/:\n• situation/js/SituationApp.js\n• situation/js/OverviewPage.js\n• situation/js/CourtFilingPage.js\n• situation/js/ElderAdvocacyPage.js\n• situation/js/CaretakerBiasPage.js\n• situation/js/ValuationPage.js'
+            }
+          },
+          {
+            quadrant: 'II', name: 'ValuationOfAccudraw', title: 'Forensic Enterprise Valuation Model', color: '#ef4444', icon: '📊', url: '../ValuationOfAccudraw/index.html',
+            files: ['ValuationOfAccudraw/js/ValuationOfAccudraw.js', 'ValuationOfAccudraw/luno.json'],
+            tiers: {
+              0: 'Quantitative forensic financial model calculating the enterprise value created by AccuDraw for Bentley Systems ($1.2B–$5.54B+).',
+              1: 'Valuation modeling based on Bentley Systems corporate financials, subscription renewals, and State DOT software lock-in during the AutoCAD Release 13 era.',
+              2: 'Financial Formulae:\n• Churn Reduction Multiple: 45–55% enterprise retention attributed to neuromuscular muscle memory\n• Net Present Value (NPV): Compounded MicroStation recurring licenses (1995–2024)\n• Counterfactual Attribution: $1.2B conservative to $5.54B+ base/unprimed search.',
+              3: 'Key File Pointers in ValuationOfAccudraw/:\n• ValuationOfAccudraw/js/ValuationOfAccudraw.js\n• ValuationOfAccudraw/luno.json'
+            }
+          },
+          {
+            quadrant: 'III', name: 'EconomicsOfAutomation', title: 'The Robot Dividend & Post-Labor Model', color: '#f59e0b', icon: '🤖', url: '../EconomicsOfAutomation/index.html',
+            files: ['EconomicsOfAutomation/js/ArticleContent.js', 'EconomicsOfAutomation/js/ColonyContent.js', 'EconomicsOfAutomation/js/DoomerContent.js', 'EconomicsOfAutomation/js/TaxChartComponent.js'],
+            tiers: {
+              0: 'First-principles macroeconomic model for human survival through automation: the Colony of 100,000 and the Robot Dividend.',
+              1: 'Multi-part economic thesis demonstrating why labor-based income collapses under advanced automation and how distributing machine capital productivity sustains aggregate demand.',
+              2: 'Macroeconomic Principles:\n• Decoupling Invariant: Human labor hours decouple from societal production output\n• Colony of 100,000: Thought experiment proving abundance with tangible currency\n• Doomer Loop: Game-theoretic proof that wage collapse destroys demand for capital owners.',
+              3: 'Key File Pointers in EconomicsOfAutomation/:\n• EconomicsOfAutomation/js/ArticleContent.js\n• EconomicsOfAutomation/js/ColonyContent.js\n• EconomicsOfAutomation/js/DoomerContent.js\n• EconomicsOfAutomation/js/TaxChartComponent.js'
+            }
+          },
+          {
+            quadrant: 'III', name: 'JobsAndAI', title: 'The Automation Horizon Empirical Analysis', color: '#f59e0b', icon: '📈', url: '../JobsAndAI/index.html',
+            files: ['JobsAndAI/js/JobsAndAI.js', 'JobsAndAI/js/ThesisPage.js', 'JobsAndAI/js/AiPerspectivePage.js'],
+            tiers: {
+              0: 'Empirical analysis of generative AI and spatial robotics replacing human labor across cognitive and physical industries.',
+              1: 'Examines the accelerating pace of AI code generation, visual synthesis, and automated logistics, demonstrating why universal purchasing power mechanisms are urgent.',
+              2: 'Empirical Framework:\n• White-collar displacement curve: Speedup of coding, drafting, and legal review\n• Hardware robotics crossover: Spatial vision + humanoid actuators\n• Tax base erosion: Impossibility of funding governments solely on payroll taxes.',
+              3: 'Key File Pointers in JobsAndAI/:\n• JobsAndAI/js/JobsAndAI.js\n• JobsAndAI/js/ThesisPage.js\n• JobsAndAI/js/AiPerspectivePage.js'
+            }
+          },
+          {
+            quadrant: 'IV', name: 'HomeSetup', title: 'Multi-Node Fleet & Port 8080 Federation', color: '#10b981', icon: '🖥️', url: '../HomeSetup/index.html',
+            files: ['HomeSetup/HomeSetup.js', 'HomeSetup/js/HomeHandoffComponent.js', 'HomeSetup/js/HomeFleetVisualizer.js', 'HomeSetup/js/HomeSummaries.js'],
+            tiers: {
+              0: 'Multi-node hardware infrastructure: verified Port 8080 federation between Ubuntu Linux (10.0.0.245) and Mac Mini (10.0.0.226).',
+              1: 'Documents the physical fleet (Ubuntu laptop, Mac Mini, Windows PC, two mobile phones), roving external drive mount points, zero-leak credential policies, and active handoff ledger.',
+              2: 'Network & Port Architecture:\n• Universal Port 8080: Luno HTTP federation (60 workspace projects, 50+ Git repos)\n• Dynamic Subnet Discovery: Auto-detects peer machines on 10.0.0.x\n• Zero-Leak Credentials: Secrets stay in local environment files, never in prompts.',
+              3: 'Key File Pointers in HomeSetup/:\n• HomeSetup/HomeSetup.js\n• HomeSetup/js/HomeHandoffComponent.js\n• HomeSetup/js/HomeFleetVisualizer.js\n• HomeSetup/js/HomeSummaries.js'
+            }
+          },
+          {
+            quadrant: 'IV', name: 'Luno', title: 'Phone-First Dual-Mode AI Cockpit', color: '#10b981', icon: '🌙', url: '../Luno/index.html',
+            files: ['Luno/app/ClientApp.js', 'Luno/app/ClientAppPaster.js', 'Luno/app/OutboxQueue.js', 'Luno/core/LunoClassPatcher.js', 'Luno/app/LunoDeployEngine.js'],
+            tiers: {
+              0: 'Phone-first development cockpit with zero-token clipboard container protocol and in-browser AST class patcher.',
+              1: 'Meta-development environment driving all projects via HTML containers, Outbox bundles, and 1-tap deployment to GitHub Pages.',
+              2: 'Protocol & Patching Invariants:\n• HTML Container Protocol: Surgical method updates inside one html fence\n• In-Browser Acorn AST: LunoClassPatcher splices methods cleanly\n• Outbox Queue: Segregates Instructions, Library Code (deduplicated), and Project Code.',
+              3: 'Key File Pointers in Luno/:\n• Luno/app/ClientApp.js\n• Luno/app/ClientAppPaster.js\n• Luno/app/OutboxQueue.js\n• Luno/core/LunoClassPatcher.js\n• Luno/app/LunoDeployEngine.js'
+            }
+          },
+          {
+            quadrant: 'IV', name: 'Library', title: 'Central Shared Dependency Hub', color: '#10b981', icon: '📚', url: '../Library/index.html',
+            files: ['Library/DomBasics.js', 'Library/UITools.js', 'Library/DocumentReader.js', 'Library/CadPlanItemNotes.js', 'Library/CadPlanDocumentEditor.js', 'Library/CadPlanAardvark.js', 'Library/SupabaseCommentsAdapter.js'],
+            tiers: {
+              0: 'Central shared dependency repository powering all sibling projects without code duplication.',
+              1: 'Houses DomBasics, UITools, DocumentReader, CadPlanItemNotes, CadPlanDocumentEditor, CadPlanAardvark, VideoPlayer, and DictationWidget.',
+              2: 'Three-Tier Resolution Chain:\n• 1. Local Server: Routes to sibling /Library/ directly\n• 2. User Fork on GitHub Pages: Resolves https://<user>.github.io/Library/\n• 3. Karmatics Root Fallback: Falls back to https://karmatics.github.io/Library/.',
+              3: 'Key File Pointers in Library/:\n• Library/DomBasics.js\n• Library/UITools.js\n• Library/DocumentReader.js\n• Library/CadPlanItemNotes.js\n• Library/CadPlanDocumentEditor.js\n• Library/CadPlanAardvark.js'
+            }
+          },
+          {
+            quadrant: 'IV', name: 'QuoraToys', title: 'Quora Spatial Annotation & Archival Tools', color: '#c084fc', icon: '🧸', url: '../QuoraToys/index.html',
+            files: ['QuoraToys/js/QuoraToys.js', 'QuoraToys/js/QuoraAnnotationComponent.js', 'QuoraToys/js/QuoraStudioComponent.js', 'QuoraToys/luno.json'],
+            tiers: {
+              0: 'In-situ bookmarklet, Chrome extension, and archival suite for rich canvas annotations and thread capturing on Quora.',
+              1: 'Combines an in-situ drawing/annotation overlay, spot-the-difference studio, and structured answer archiver for publishing and cross-linking essays.',
+              2: 'Key Subsystems:\n• Bookmarklet & Extension: AardvarkActions + in-situ overlay\n• Vector Annotation: DrawingApp integration\n• Answer Archiver: Local & portable export pipeline.',
+              3: 'Key File Pointers in QuoraToys/:\n• QuoraToys/js/QuoraToys.js\n• QuoraToys/js/QuoraAnnotationComponent.js\n• QuoraToys/js/QuoraStudioComponent.js'
+            }
           }
-        },
-        {
-          quadrant: 'I', name: 'CadPlan', title: 'Master CAD Specification & 3D Lab', color: '#00f2fe', icon: '📐', url: '../CadPlan/index.html',
-          files: ['CadPlan/js/CadPlanMetaContent.js', 'CadPlan/js/AccuCadAuditContent.js', 'CadPlan/js/CadITwinParityContent.js', 'CadPlan/js/CadStudioDemoComponent.js', 'CadPlan/js/curve/UpdateControlPoints.js'],
-          tiers: {
-            0: 'Rob Brown\'s 30-year proven AccuDraw spatial drafting engine, SmartLine continuous chaining, on-curve cubic Bézier splines, and 4-layer headless kernel.',
-            1: 'The living executable master specification for open-source 3D CAD. Bridges CADCraft (pure-Rust AutoCAD clone) with AccuDraw\'s floating kinetic compass, single-stroke 3D plane rotations (T, F, S, V), 50ms chorded tentative snapping, and 4-finger Z-elevation on mobile WebRTC touchpads.',
-            2: 'Mathematical Invariants:\n• 3x3 Direction-Cosine Basis (ThreeAxes): X_c, Y_c, Z_c\n• Model-Space Perpendicular Normal: P_proj = Origin + ((P_snap - Origin) · u) * u\n• SmartLine Two-Phase Arcs: Phase 1 (Center dashed circle), Phase 2 (Sweep committing DXF bulge tan(θ/4))\n• On-Curve Spline Relaxation: 8-iteration solver deriving G1 tangents without off-curve handles.',
-            3: 'Key File Pointers in CadPlan/:\n• CadPlan/js/CadPlanMetaContent.js\n• CadPlan/js/AccuCadAuditContent.js\n• CadPlan/js/CadITwinParityContent.js\n• CadPlan/js/CadStudioDemoComponent.js\n• CadPlan/js/curve/UpdateControlPoints.js'
-          }
-        },
-        {
-          quadrant: 'I', name: 'accuCad', title: 'Unified 3D WebGL Workstation', color: '#00f2fe', icon: '🏛️', url: '../accuCad/index.html',
-          files: ['accuCad/js/Main.js', 'accuCad/js/BaseController.js', 'accuCad/js/accudraw/AccuDrawLogic.js', 'accuCad/js/TentativePointHandler.js', 'accuCad/js/CameraOrbitAnimator.js'],
-          tiers: {
-            0: 'Production 3D CAD workstation with tentative snapping, direction-cosine matrix basis, and PBR clearcoat materials.',
-            1: 'Interactive CAD studio implementing Rob Brown\'s complete interaction loop: BaseController event pump, AccuDrawLogic constraint state machine, RoundingUtils3D vector fillets, and Line2 screen-space thick wireframes with motion parallax camera oscillation.',
-            2: 'Invariants & Algorithms:\n• GeneratePoint.generate(): Screen pixel unprojection to 3D ray\n• AccuDrawLogic.onMotion(): Smart Focus comparing |lx| vs |ly|\n• TentativePointHandler: 14px screen-space thick pick fallback\n• CameraOrbitAnimator: Monocular motion parallax wiggling eye vector R = ||D|| * 0.045.',
-            3: 'Key File Pointers in accuCad/:\n• accuCad/js/Main.js\n• accuCad/js/BaseController.js\n• accuCad/js/accudraw/AccuDrawLogic.js\n• accuCad/js/TentativePointHandler.js\n• accuCad/js/CameraOrbitAnimator.js'
-          }
-        },
-        {
-          quadrant: 'I', name: 'accudraw', title: '30-Year Historical Lore & Patents', color: '#00f2fe', icon: '📜', url: '../accudraw/index.html',
-          files: ['accudraw/js/AccuDrawArchiveApp.js', 'accudraw/js/AccuDrawData.js', 'accudraw/accudraw3d_page1.html'],
-          tiers: {
-            0: 'The historical archive of AccuDraw\'s invention at Bentley Systems, US Patent #5,754,182, and MicroStation Manager lore.',
-            1: 'Documents the 1994–1996 breakthrough that replaced command-line coordinate typing with a kinetic on-canvas compass and established Bentley Systems\' first issued corporate patent.',
-            2: 'Patents & Legal Status:\n• US Patent #5,371,845 (Intergraph, 1994): Dynamic constraint alignment\n• US Patent #5,754,182 (Bentley Systems, Issued 1998): Kinetic floating orientation frame\n• Exclusivity: Expired May 2018; core mathematics are public domain.',
-            3: 'Key File Pointers in accudraw/:\n• accudraw/js/AccuDrawArchiveApp.js\n• accudraw/js/AccuDrawData.js\n• accudraw/accudraw3d_page1.html'
-          }
-        },
-        {
-          quadrant: 'II', name: 'situation', title: 'Executive Career Dossier, Court Filing & Legal Reality', color: '#ef4444', icon: '⚖️', url: '../situation/index.html',
-          files: ['situation/js/SituationApp.js', 'situation/js/OverviewPage.js', 'situation/js/CourtFilingPage.js', 'situation/js/ElderAdvocacyPage.js', 'situation/js/CaretakerBiasPage.js', 'situation/js/ValuationPage.js', 'situation/luno.json'],
-          tiers: {
-            0: 'Updated Nov 2026 personal dossier: stable living situation, daughter & court filing workspace, caretaker POA exhibits, elder advocacy, and $1.2B–$5.54B+ ($2.3B midpoint) IP valuation.',
-            1: 'Personal, professional, and legal dossier tracking November 2026 housing stability, court filing preparation for daughter matters, caretaker bias & POA boundary exhibits, and 4-model AccuDraw valuation.',
-            2: 'Attribution & Dossier Structure:\n• Valuation Midpoint: $2.3B across Claude, Gemini, ChatGPT, and Grok ($1.2B–$5.54B+ counterfactual)\n• Court & Daughter Workspace: Living Directives-enabled stability & evidence preparation\n• Elder Advocacy: VA Code § 64.2-2019.1 / § 64.2-1612 POA boundary analysis.',
-            3: 'Key File Pointers in situation/:\n• situation/js/SituationApp.js\n• situation/js/OverviewPage.js\n• situation/js/CourtFilingPage.js\n• situation/js/ElderAdvocacyPage.js\n• situation/js/CaretakerBiasPage.js\n• situation/js/ValuationPage.js'
-          }
-        },
-        {
-          quadrant: 'II', name: 'ValuationOfAccudraw', title: 'Forensic Enterprise Valuation Model', color: '#ef4444', icon: '📊', url: '../ValuationOfAccudraw/index.html',
-          files: ['ValuationOfAccudraw/js/ValuationOfAccudraw.js', 'ValuationOfAccudraw/luno.json'],
-          tiers: {
-            0: 'Quantitative forensic financial model calculating the enterprise value created by AccuDraw for Bentley Systems ($1.2B–$5.54B+).',
-            1: 'Valuation modeling based on Bentley Systems corporate financials, subscription renewals, and State DOT software lock-in during the AutoCAD Release 13 era.',
-            2: 'Financial Formulae:\n• Churn Reduction Multiple: 45–55% enterprise retention attributed to neuromuscular muscle memory\n• Net Present Value (NPV): Compounded MicroStation recurring licenses (1995–2024)\n• Counterfactual Attribution: $1.2B conservative to $5.54B+ base/unprimed search.',
-            3: 'Key File Pointers in ValuationOfAccudraw/:\n• ValuationOfAccudraw/js/ValuationOfAccudraw.js\n• ValuationOfAccudraw/luno.json'
-          }
-        },
-        {
-          quadrant: 'III', name: 'EconomicsOfAutomation', title: 'The Robot Dividend & Post-Labor Model', color: '#f59e0b', icon: '🤖', url: '../EconomicsOfAutomation/index.html',
-          files: ['EconomicsOfAutomation/js/ArticleContent.js', 'EconomicsOfAutomation/js/ColonyContent.js', 'EconomicsOfAutomation/js/DoomerContent.js', 'EconomicsOfAutomation/js/TaxChartComponent.js'],
-          tiers: {
-            0: 'First-principles macroeconomic model for human survival through automation: the Colony of 100,000 and the Robot Dividend.',
-            1: 'Multi-part economic thesis demonstrating why labor-based income collapses under advanced automation and how distributing machine capital productivity sustains aggregate demand.',
-            2: 'Macroeconomic Principles:\n• Decoupling Invariant: Human labor hours decouple from societal production output\n• Colony of 100,000: Thought experiment proving abundance with tangible currency\n• Doomer Loop: Game-theoretic proof that wage collapse destroys demand for capital owners.',
-            3: 'Key File Pointers in EconomicsOfAutomation/:\n• EconomicsOfAutomation/js/ArticleContent.js\n• EconomicsOfAutomation/js/ColonyContent.js\n• EconomicsOfAutomation/js/DoomerContent.js\n• EconomicsOfAutomation/js/TaxChartComponent.js'
-          }
-        },
-        {
-          quadrant: 'III', name: 'JobsAndAI', title: 'The Automation Horizon Empirical Analysis', color: '#f59e0b', icon: '📈', url: '../JobsAndAI/index.html',
-          files: ['JobsAndAI/js/JobsAndAI.js', 'JobsAndAI/js/ThesisPage.js', 'JobsAndAI/js/AiPerspectivePage.js'],
-          tiers: {
-            0: 'Empirical analysis of generative AI and spatial robotics replacing human labor across cognitive and physical industries.',
-            1: 'Examines the accelerating pace of AI code generation, visual synthesis, and automated logistics, demonstrating why universal purchasing power mechanisms are urgent.',
-            2: 'Empirical Framework:\n• White-collar displacement curve: Speedup of coding, drafting, and legal review\n• Hardware robotics crossover: Spatial vision + humanoid actuators\n• Tax base erosion: Impossibility of funding governments solely on payroll taxes.',
-            3: 'Key File Pointers in JobsAndAI/:\n• JobsAndAI/js/JobsAndAI.js\n• JobsAndAI/js/ThesisPage.js\n• JobsAndAI/js/AiPerspectivePage.js'
-          }
-        },
-        {
-          quadrant: 'IV', name: 'HomeSetup', title: 'Multi-Node Fleet & Port 8080 Federation', color: '#10b981', icon: '🖥️', url: '../HomeSetup/index.html',
-          files: ['HomeSetup/HomeSetup.js', 'HomeSetup/js/HomeHandoffComponent.js', 'HomeSetup/js/HomeFleetVisualizer.js', 'HomeSetup/js/HomeSummaries.js'],
-          tiers: {
-            0: 'Multi-node hardware infrastructure: verified Port 8080 federation between Ubuntu Linux (10.0.0.245) and Mac Mini (10.0.0.226).',
-            1: 'Documents the physical fleet (Ubuntu laptop, Mac Mini, Windows PC, two mobile phones), roving external drive mount points, zero-leak credential policies, and active handoff ledger.',
-            2: 'Network & Port Architecture:\n• Universal Port 8080: Luno HTTP federation (60 workspace projects, 50+ Git repos)\n• Dynamic Subnet Discovery: Auto-detects peer machines on 10.0.0.x\n• Zero-Leak Credentials: Secrets stay in local environment files, never in prompts.',
-            3: 'Key File Pointers in HomeSetup/:\n• HomeSetup/HomeSetup.js\n• HomeSetup/js/HomeHandoffComponent.js\n• HomeSetup/js/HomeFleetVisualizer.js\n• HomeSetup/js/HomeSummaries.js'
-          }
-        },
-        {
-          quadrant: 'IV', name: 'Luno', title: 'Phone-First Dual-Mode AI Cockpit', color: '#10b981', icon: '🌙', url: '../Luno/index.html',
-          files: ['Luno/app/ClientApp.js', 'Luno/app/ClientAppPaster.js', 'Luno/app/OutboxQueue.js', 'Luno/core/LunoClassPatcher.js', 'Luno/app/LunoDeployEngine.js'],
-          tiers: {
-            0: 'Phone-first development cockpit with zero-token clipboard container protocol and in-browser AST class patcher.',
-            1: 'Meta-development environment driving all projects via HTML containers, Outbox bundles, and 1-tap deployment to GitHub Pages.',
-            2: 'Protocol & Patching Invariants:\n• HTML Container Protocol: Surgical method updates inside one html fence\n• In-Browser Acorn AST: LunoClassPatcher splices methods cleanly\n• Outbox Queue: Segregates Instructions, Library Code (deduplicated), and Project Code.',
-            3: 'Key File Pointers in Luno/:\n• Luno/app/ClientApp.js\n• Luno/app/ClientAppPaster.js\n• Luno/app/OutboxQueue.js\n• Luno/core/LunoClassPatcher.js\n• Luno/app/LunoDeployEngine.js'
-          }
-        },
-        {
-          quadrant: 'IV', name: 'Library', title: 'Central Shared Dependency Hub', color: '#10b981', icon: '📚', url: '../Library/index.html',
-          files: ['Library/DomBasics.js', 'Library/UITools.js', 'Library/DocumentReader.js', 'Library/CadPlanItemNotes.js', 'Library/CadPlanDocumentEditor.js', 'Library/CadPlanAardvark.js', 'Library/SupabaseCommentsAdapter.js'],
-          tiers: {
-            0: 'Central shared dependency repository powering all sibling projects without code duplication.',
-            1: 'Houses DomBasics, UITools, DocumentReader, CadPlanItemNotes, CadPlanDocumentEditor, CadPlanAardvark, VideoPlayer, and DictationWidget.',
-            2: 'Three-Tier Resolution Chain:\n• 1. Local Server: Routes to sibling /Library/ directly\n• 2. User Fork on GitHub Pages: Resolves https://<user>.github.io/Library/\n• 3. Karmatics Root Fallback: Falls back to https://karmatics.github.io/Library/.',
-            3: 'Key File Pointers in Library/:\n• Library/DomBasics.js\n• Library/UITools.js\n• Library/DocumentReader.js\n• Library/CadPlanItemNotes.js\n• Library/CadPlanDocumentEditor.js\n• Library/CadPlanAardvark.js'
-          }
-        },
-        {
-          quadrant: 'IV', name: 'QuoraToys', title: 'Quora Spatial Annotation & Archival Tools', color: '#c084fc', icon: '🧸', url: '../QuoraToys/index.html',
-          files: ['QuoraToys/js/QuoraToys.js', 'QuoraToys/js/QuoraAnnotationComponent.js', 'QuoraToys/js/QuoraStudioComponent.js', 'QuoraToys/luno.json'],
-          tiers: {
-            0: 'In-situ bookmarklet, Chrome extension, and archival suite for rich canvas annotations and thread capturing on Quora.',
-            1: 'Combines an in-situ drawing/annotation overlay, spot-the-difference studio, and structured answer archiver for publishing and cross-linking essays.',
-            2: 'Key Subsystems:\n• Bookmarklet & Extension: AardvarkActions + in-situ overlay\n• Vector Annotation: DrawingApp integration\n• Answer Archiver: Local & portable export pipeline.',
-            3: 'Key File Pointers in QuoraToys/:\n• QuoraToys/js/QuoraToys.js\n• QuoraToys/js/QuoraAnnotationComponent.js\n• QuoraToys/js/QuoraStudioComponent.js'
-          }
-        }
-      ];
-    }
-
+        ];
+      }
   static resolveAppUrl(projectName, hash = '') {
       if (!projectName) return '#';
       const cleanHash = hash ? (hash.startsWith('#') ? hash : `#${hash}`) : '';

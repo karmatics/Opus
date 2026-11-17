@@ -19,7 +19,7 @@ class OpusSummaries {
         },
         q2_narrative: {
           title: '3. Personal Narrative & Legal Reality (situation, ValuationOfAccudraw)',
-          tldr: 'Documents stabilized Nov 2026 living conditions alongside daughter court/custody filings and commercialization focus (additional family/POA context is gated behind an optional access toggle).',
+          tldr: 'Documents Nov 2026 Chico stability (with Jack helping move & start Social Security, EBT phasing out; Don on email), being out of contact—not by choice—with all blood relatives (94-year-old mother, sister, and 12-year-old daughter Stella, including ex-wife working against judge-ordered video contact), career-fit and executive-dysfunction disability context, San Mateo ~$600/mo withholding, and June 2026 stabilization—with sensitive family/POA records gated.',
           whatsNext: 'Quadrant III transitions from personal restitution to structural macro-economics for the AI era.'
         },
         q3_economics: {

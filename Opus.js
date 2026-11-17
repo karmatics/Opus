@@ -8,106 +8,127 @@ class Opus {
   }
 
   async run(env) {
-        if (this.rootElement) {
-          this.destroy();
-        }
-
-        if (!env || !env.container) {
-          throw new Error('[Opus] run() requires an environment object with a valid container.');
-        }
-
-        if (typeof DomBasics !== 'undefined' && typeof DomBasics.run === 'function') {
-          DomBasics.run();
-        }
-
-        this.env = env;
-        this.rootElement = env.container;
-
-        globalThis._opusInstance = this;
-        globalThis._cadPlanInstance = this;
-
-        document.documentElement.style.overflowY = 'auto';
-        document.body.style.overflowY = 'auto';
-
-        this.rootElement.style.overflowX = 'hidden';
-        this.rootElement.style.overflowY = 'visible';
-        this.rootElement.style.height = 'auto';
-        this.rootElement.style.minHeight = '100vh';
-        this.rootElement.style.boxSizing = 'border-box';
-        this.rootElement.style.marginLeft = '0px';
-        this.rootElement.style.width = '100%';
-
-        if (typeof KeyCommandHandler !== 'undefined' && typeof KeyCommandHandler.setPaused === 'function') {
-          KeyCommandHandler.setPaused(true);
-        }
-
-        const pages = [
-          { id: 'overview', title: '0. Master Opus Gateway & 4-Quadrant Portal', docClass: () => globalThis.OpusOverviewContent },
-          { id: 'verification', title: '1. Economic Impact & Public Verification', docClass: () => globalThis.OpusVerificationContent },
-          { id: 'q1_cad', title: '2. Inventions & Spatial CAD (CadPlan, accuCad, accudraw)', docClass: () => globalThis.OpusQ1CadContent },
-          { id: 'q2_narrative', title: '3. Personal Narrative & Legal Reality (situation, ValuationOfAccudraw)', docClass: () => globalThis.OpusQ2NarrativeContent },
-          { id: 'q3_economics', title: '4. Post-Labor Macro-Economics & Robot Dividend (EconomicsOfAutomation, JobsAndAI)', docClass: () => globalThis.OpusQ3EconomicsContent },
-          { id: 'q4_cockpit', title: '5. Fleet Infrastructure & Cockpit (HomeSetup, Luno, Library)', docClass: () => globalThis.OpusQ4CockpitContent },
-          { id: 'strategy', title: '6. Grand Strategy: Guerrilla Playbook & Living Loop', docClass: () => globalThis.OpusGrandStrategyContent }
-        ];
-        this._pages = pages;
-
-        this.reader = new DocumentReader({
-          container: env.container,
-          brandTitle: 'Rob Brown Opus • Master Living Portal',
-          brandIcon: '🏛️',
-          dossierId: 'Opus',
-          pages: pages,
-          itemNotes: globalThis.CadPlanItemNotes || null,
-          itemNotesClass: globalThis.CadPlanItemNotes || null,
-          editorClass: globalThis.CadPlanDocumentEditor || null
-        });
-
-        this.activePageId = this.reader.currentPageId || 'overview';
-
-        const origSwitchPage = this.reader.switchPage.bind(this.reader);
-        this.reader.switchPage = (pageId, updateUrl = true) => {
-          origSwitchPage(pageId, updateUrl);
-          this._syncSidebarActiveState(pageId);
-        };
-
-        await this.reader.init();
-
-        if (typeof CadPlanAardvark !== 'undefined') {
-          this.aardvark = new CadPlanAardvark({
-            container: env.container,
-            dossierId: 'Opus',
-            itemNotes: globalThis.CadPlanItemNotes || null,
-            documentReader: this.reader
-          });
-          this.aardvark.init();
-          if (this.reader) {
-            this.reader.aardvark = this.aardvark;
-          }
-        }
-
-        if (typeof SidePanel !== 'undefined') {
-          this.sidePanel = new SidePanel('left', 340, null);
-          this.reader.options.sidePanel = this.sidePanel;
-          this._buildSidePanelNavigation(pages);
-          this._syncSidebarActiveState(this.reader.currentPageId);
-          if (window.innerWidth >= 860) {
-            this.sidePanel.open();
-          }
-        }
-
-        if (typeof CadPlanItemNotes !== 'undefined' && typeof CadPlanItemNotes.subscribe === 'function') {
-          this._unsubNotes = CadPlanItemNotes.subscribe(() => {
-            if (this.sidePanel && this._pages) {
-              this._buildSidePanelNavigation(this._pages);
-              this._syncSidebarActiveState(this.activePageId);
-            }
-          });
-        }
-
-        return this;
+      if (this.rootElement) {
+        this.destroy();
       }
 
+      if (!env || !env.container) {
+        throw new Error('[Opus] run() requires an environment object with a valid container.');
+      }
+
+      if (typeof DomBasics !== 'undefined' && typeof DomBasics.run === 'function') {
+        DomBasics.run();
+      }
+
+      this.env = env;
+      this.rootElement = env.container;
+
+      globalThis._opusInstance = this;
+      globalThis._cadPlanInstance = this;
+
+      document.documentElement.style.overflowY = 'auto';
+      document.body.style.overflowY = 'auto';
+
+      this.rootElement.style.overflowX = 'hidden';
+      this.rootElement.style.overflowY = 'visible';
+      this.rootElement.style.height = 'auto';
+      this.rootElement.style.minHeight = '100vh';
+      this.rootElement.style.boxSizing = 'border-box';
+      this.rootElement.style.marginLeft = '0px';
+      this.rootElement.style.width = '100%';
+
+      if (typeof KeyCommandHandler !== 'undefined' && typeof KeyCommandHandler.setPaused === 'function') {
+        KeyCommandHandler.setPaused(true);
+      }
+
+      const pages = [
+        { id: 'overview', title: '0. Master Opus Gateway & 4-Quadrant Portal', docClass: () => globalThis.OpusOverviewContent },
+        { id: 'verification', title: '1. Economic Impact & Public Verification', docClass: () => globalThis.OpusVerificationContent },
+        { id: 'q1_cad', title: '2. Inventions & Spatial CAD (CadPlan, accuCad, accudraw)', docClass: () => globalThis.OpusQ1CadContent },
+        { id: 'q2_narrative', title: '3. Personal Narrative & Legal Reality (situation, ValuationOfAccudraw)', docClass: () => globalThis.OpusQ2NarrativeContent },
+        { id: 'q3_economics', title: '4. Post-Labor Macro-Economics & Robot Dividend (EconomicsOfAutomation, JobsAndAI)', docClass: () => globalThis.OpusQ3EconomicsContent },
+        { id: 'q4_cockpit', title: '5. Fleet Infrastructure & Cockpit (HomeSetup, Luno, Library)', docClass: () => globalThis.OpusQ4CockpitContent },
+        { id: 'strategy', title: '6. Grand Strategy: Guerrilla Playbook & Living Loop', docClass: () => globalThis.OpusGrandStrategyContent }
+      ];
+      this._pages = pages;
+
+      this.reader = new DocumentReader({
+        container: env.container,
+        brandTitle: 'Rob Brown Opus • Master Living Portal',
+        brandIcon: '🏛️',
+        dossierId: 'Opus',
+        pages: pages,
+        itemNotes: globalThis.CadPlanItemNotes || null,
+        itemNotesClass: globalThis.CadPlanItemNotes || null,
+        editorClass: globalThis.CadPlanDocumentEditor || null
+      });
+
+      this.activePageId = this.reader.currentPageId || 'overview';
+
+      const origSwitchPage = this.reader.switchPage.bind(this.reader);
+      this.reader.switchPage = (pageId, updateUrl = true) => {
+        origSwitchPage(pageId, updateUrl);
+        this._syncSidebarActiveState(pageId);
+      };
+
+      await this.reader.init();
+
+      if (this.reader.navBar && typeof OpusRouterComponent !== 'undefined') {
+        const leftNavGroup = this.reader.navBar.firstElementChild;
+        if (leftNavGroup) {
+          const portalLink = makeElement('a', {
+            href: OpusRouterComponent.resolveAppUrl('Portal'),
+            className: 'dr-nav-btn',
+            title: 'Return to Public Portal Front Page',
+            style: {
+              padding: '5px 11px',
+              fontSize: '0.76rem',
+              fontWeight: '800',
+              color: '#00f2fe',
+              borderColor: 'rgba(0, 242, 254, 0.45)',
+              background: 'rgba(0, 242, 254, 0.08)',
+              borderRadius: '20px',
+              textDecoration: 'none'
+            }
+          }, '← Portal');
+          leftNavGroup.insertBefore(portalLink, leftNavGroup.firstChild);
+        }
+      }
+
+      if (typeof CadPlanAardvark !== 'undefined') {
+        this.aardvark = new CadPlanAardvark({
+          container: env.container,
+          dossierId: 'Opus',
+          itemNotes: globalThis.CadPlanItemNotes || null,
+          documentReader: this.reader
+        });
+        this.aardvark.init();
+        if (this.reader) {
+          this.reader.aardvark = this.aardvark;
+        }
+      }
+
+      if (typeof SidePanel !== 'undefined') {
+        this.sidePanel = new SidePanel('left', 340, null);
+        this.reader.options.sidePanel = this.sidePanel;
+        this._buildSidePanelNavigation(pages);
+        this._syncSidebarActiveState(this.reader.currentPageId);
+        if (window.innerWidth >= 860) {
+          this.sidePanel.open();
+        }
+      }
+
+      if (typeof CadPlanItemNotes !== 'undefined' && typeof CadPlanItemNotes.subscribe === 'function') {
+        this._unsubNotes = CadPlanItemNotes.subscribe(() => {
+          if (this.sidePanel && this._pages) {
+            this._buildSidePanelNavigation(this._pages);
+            this._syncSidebarActiveState(this.activePageId);
+          }
+        });
+      }
+
+      return this;
+    }
   _buildSidePanelNavigation(pages) {
     if (!this.sidePanel) return;
     this.sidePanel.header.innerHTML = '';
